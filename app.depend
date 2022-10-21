@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1666318021 source:c:\users\lucas\onedrive\desktop\projectsunip\app\comettech.c
+	"libs.h"
+
+1666312702 c:\users\lucas\onedrive\desktop\projectsunip\app\libs.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<windows.h>
+
