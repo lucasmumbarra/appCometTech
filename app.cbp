@@ -22,10 +22,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="cometTech.c">
+		<Unit filename="src/cometTech.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="libs.h" />
+		<Unit filename="src/libs.h" />
+		<Unit filename="src/login.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/login.h" />
+		<Unit filename="src/menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/menu.h" />
+		<Unit filename="src/submenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/submenu.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -1,11 +1,46 @@
 # depslib dependency file v1.0
-1666318021 source:c:\users\lucas\onedrive\desktop\projectsunip\app\comettech.c
+1666661895 source:c:\users\lucas\onedrive\desktop\projectsunip\app\comettech.c
 	"libs.h"
 
-1666312702 c:\users\lucas\onedrive\desktop\projectsunip\app\libs.h
+1666662052 c:\users\lucas\onedrive\desktop\projectsunip\app\libs.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<locale.h>
 	<windows.h>
+
+1666661891 source:c:\users\lucas\onedrive\desktop\projectsunip\app\login.c
+	"login.h"
+
+1666661946 c:\users\lucas\onedrive\desktop\projectsunip\app\login.h
+	"libs.h"
+
+1666661891 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.c
+	"login.h"
+
+1666661946 c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.h
+	"libs.h"
+
+1666662052 c:\users\lucas\onedrive\desktop\projectsunip\app\src\libs.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<windows.h>
+
+1666662312 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.c
+
+1666662473 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\comettech.c
+	"libs.h"
+
+1666665080 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
+	"menu.h"
+
+1666662545 c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.h
+	"libs.h"
+	"submenu.h"
+
+1666665006 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.h
+	"libs.h"
+	"menu.h"
 
