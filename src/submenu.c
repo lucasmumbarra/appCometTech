@@ -19,5 +19,38 @@ void menuRegistration() {
 
         printf("\n Escolha uma das opções acima: ");
         scanf("%d", &op);
+
+        switch(op) {
+
+        case 1:
+            system("cls");
+            printf(" //////////////////////////////////////////////////////////////////////\n");
+            printf("\n                  COMET TECH - CADASTRAR CLIENTE\n");
+            printf(" //////////////////////////////////////////////////////////////////////\n");
+            system("pause");
+            break;
+        case 2:
+            system("cls");
+            printf(" //////////////////////////////////////////////////////////////////////\n");
+            printf("\n                COMET TECH - CADASTRAR FUNCIONÁRIOS\n");
+            printf(" //////////////////////////////////////////////////////////////////////\n");
+            RegisterEmployee();
+            break;
+        case 3:
+            system("cls");
+            printf(" //////////////////////////////////////////////////////////////////////\n");
+            printf("\n                  COMET TECH - CADASTRAR PRODUTOS\n");
+            printf(" //////////////////////////////////////////////////////////////////////\n");
+            system("pause");
+            break;
+        case 0:
+            system("cls");
+            menuManagement();
+            break;
+        }
     } while (op != 0);
 }
+
+
+
+

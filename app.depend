@@ -28,7 +28,8 @@
 	<locale.h>
 	<windows.h>
 
-1666662312 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.c
+1666669232 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.c
+	"submenu.h"
 
 1666662473 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\comettech.c
 	"libs.h"
@@ -43,4 +44,10 @@
 1666665006 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.h
 	"libs.h"
 	"menu.h"
+
+1666669559 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario.c
+	"funcionario.h"
+
+1666669600 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario.h
+	"libs.h"
 
