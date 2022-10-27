@@ -35,4 +35,6 @@ void ListarFuncionario();
 int PesquisarFuncionario();
 
 void ExcluirFuncionario();
+
+void AlterarFuncionario();
 #endif // FUNCIONARIO_H
