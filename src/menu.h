@@ -4,5 +4,5 @@
 #include "libs.h"
 #include "submenu.h"
 
-void menuManagement();
+void MenuGerencia();
 #endif // MENU_H
