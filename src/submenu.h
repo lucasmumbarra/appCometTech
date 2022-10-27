@@ -4,5 +4,5 @@
 #include "libs.h"
 #include "menu.h"
 
-void menuRegistration();
+void MenuCadastro();
 #endif // SUBMENU_H

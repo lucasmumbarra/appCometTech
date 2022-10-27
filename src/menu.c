@@ -1,6 +1,6 @@
 #include "menu.h"
 
-void menuManagement() {
+void MenuGerencia() {
 
     int op;
 
@@ -14,9 +14,7 @@ void menuManagement() {
 
         printf("\n\n ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n");
         printf(" 1 - CADASTRO \n");
-        printf(" 2 - DEPARTAMENTO PESSOAL \n");
-        printf(" 3 - RELATÓRIOS \n");
-        printf(" 4 - VENDAS \n");
+        printf(" 2 - VENDAS \n");
 
         printf("\n Escolha uma das opções acima: ");
         scanf("%d", &op);
@@ -27,23 +25,9 @@ void menuManagement() {
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                          COMET TECH - CADASTRO   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            menuRegistration();
+            MenuCadastro();
             break;
         case 2:
-            system("cls");
-            printf(" //////////////////////////////////////////////////////////////////////\n");
-            printf("\n                    COMET TECH - DEPARTAMENTO PESSOAL   \n");
-            printf("\n ////////////////////////////////////////////////////////////////////\n");
-            system("pause");
-            break;
-        case 3:
-            system("cls");
-            printf(" //////////////////////////////////////////////////////////////////////\n");
-            printf("\n                         COMET TECH - RELATÓRIOS   \n");
-            printf("\n ////////////////////////////////////////////////////////////////////\n");
-            system("pause");
-            break;
-        case 4:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                          COMET TECH - VENDAS   \n");

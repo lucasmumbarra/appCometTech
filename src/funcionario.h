@@ -6,7 +6,7 @@
 #define MAX 250
 #define MIN 30
 
-#define ARQ_FUNCIONARIO "database/funcionarios.txt"
+#define ARQ_FUNCIONARIO "funcionarios.txt"
 
 FILE *fp;
 
@@ -14,19 +14,27 @@ typedef struct {
     char cod[MIN];
     char nome[MAX];
     char cpf[MIN];
-    char email[MAX];
+    char usuario[MAX];
     char senha[MIN];
     int ativo;
-    int tipo
+    int tipo;
 } Funcionario;
 
-void EmployeeBase();
+void BaseFuncionario();
 
-void InitializeEmployee(Funcionario *funcionario);
+void InicializarFuncionario(Funcionario *funcionario);
 
-void ReadEmployee(Funcionario *funcionario);
+void LerFuncionario(Funcionario *funcionario);
 
-void DisplayEmployee(Funcionario *funcionario);
+void ExibirFuncionario(Funcionario *funcionario);
 
-void RegisterEmployee();
+void CadastrarFuncionario();
+
+void ListarFuncionario();
+
+int PesquisarFuncionario();
+
+void ExcluirFuncionario();
+
+void AlterarFuncionario();
 #endif // FUNCIONARIO_H
