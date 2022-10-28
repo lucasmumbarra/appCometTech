@@ -42,6 +42,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/submenu.h" />
+		<Unit filename="src/submenu_gerencia.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/submenu_gerencia.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

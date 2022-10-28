@@ -52,7 +52,7 @@ void MenuGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                          COMET TECH - VENDAS   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            MenuVenda();
             break;
         case 0:
             system("cls");

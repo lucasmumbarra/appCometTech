@@ -8,4 +8,6 @@ void MenuCliente();
 
 void MenuProduto();
 
+void MenuVenda();
+
 #endif //SUBMENU_H
