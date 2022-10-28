@@ -233,6 +233,72 @@ void ExcluirFuncionarioLogin() {
     fclose(fp);
 }
 
+void AlterarFuncionario() {
+    BaseFuncionario();
+    Funcionario funcionario;
+
+    int pos, op;
+
+    pos = PesquisarFuncionario();
+
+    fseek(fp, pos*sizeof(Funcionario), SEEK_SET);
+
+    if(fread(&funcionario, sizeof(Funcionario), 1, fp) == 1) {
+        while(1) {
+            system("cls");
+            printf(" ++++++++++ ALTERAR FUNCIONÁRIO ++++++++++\n");
+            ExibirFuncionario(&funcionario);
+            printf("\n 1 - NOME  2 - CPF  3 - USUÁRIO  4 - SENHA  5 - SALVAR  6 - SAIR \n");
+            scanf("%i", &op);
+
+            if(op == 1) {
+                printf("Nome: ");
+                fflush(stdin);
+                fgets(funcionario.nome, MAX, stdin);
+            }
+
+            if(op == 2) {
+                printf("CPF: ");
+                fflush(stdin);
+                fgets(funcionario.cpf, MIN, stdin);
+            }
+
+            if(op == 3) {
+                printf("Usuário: ");
+                fflush(stdin);
+                fgets(funcionario.usuario, MAX, stdin);
+            }
+
+            if(op == 4) {
+                printf("Senha: ");
+                fflush(stdin);
+                fgets(funcionario.senha, MIN, stdin);
+            }
+
+            if(op == 5) {
+                fseek(fp, pos*sizeof(Funcionario), SEEK_SET);
+                if(fwrite(&funcionario, sizeof(Funcionario), 1, fp) != 1) {
+                    printf("\n Falha ao Alterar o registro!\n");
+                    printf("\n\n Pressione ENTER para continuar.");
+                    getche();
+                    break;
+                } else {
+                    printf("\n Registro alterado com sucesso!\n");
+                    printf("\n\n Pressione ENTER para continuar.");
+                    getche();
+                    break;
+                }
+            }
+
+            if(op == 6) {
+                printf("\n SAINDO \n");
+                Sleep(1);
+            }
+        }
+    }
+    fclose(fp);
+}
+
 int CarregarCodigoFuncionario() {
     BaseFuncionarioLogin();
     FuncionarioLogin fLogin;
