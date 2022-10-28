@@ -1,10 +1,12 @@
 #include "menu.h"
 
-void MenuGerencia() {
+void MenuGerencia()
+{
 
-    int op;
+    int op, validacaoGerencia = 1;
 
-    do {
+    do
+    {
         system("cls");
         printf(" //////////////////////////////////////////////////////////////////////\n");
         printf("\n");
@@ -22,27 +24,28 @@ void MenuGerencia() {
         printf("\n Escolha uma das opções acima: ");
         scanf("%d", &op);
 
-        switch(op) {
+        switch (op)
+        {
         case 1:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                        COMET TECH - CLIENTE   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            MenuCliente();
             break;
         case 2:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                        COMET TECH - FUNCIONÁRIO   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            MenuCadastro();
+            MenuFuncionarioGerencia();
             break;
         case 3:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                        COMET TECH - PRODUTO   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            MenuProduto();
             break;
         case 4:
             system("cls");
@@ -59,20 +62,24 @@ void MenuGerencia() {
             EncerrarPrograma();
             break;
         }
-    } while(op != 0);
+    } while (op != 0);
 }
 
-void EncerrarPrograma() {
+void EncerrarPrograma()
+{
     int op;
 
     printf("\nVocê Deseja realmente encerrar o programa?\n");
-    printf("\n 1 - SIM, ENCERRAR!  2 - NÃO\n Selecione uma opção:");
+    printf("\n 1 - SIM, ENCERRAR!  2 - NÃO\n Selecione uma opção: ");
     scanf("%i", &op);
 
-    if (op == 1) {
-        exit(EXIT_SUCCESS);
+    if (op == 1)
+    {
+        // exit(EXIT_SUCCESS);
+        system("taskkill /IM cb_console_runner.exe");
     }
-    if (op == 2) {
+    if (op == 2)
+    {
         MenuGerencia();
     }
 }
