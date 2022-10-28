@@ -15,12 +15,12 @@
 1666661946 c:\users\lucas\onedrive\desktop\projectsunip\app\login.h
 	"libs.h"
 
-1666841786 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.c
+1666927606 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.c
 	"login.h"
 
-1666841620 c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.h
+1666926146 c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.h
 	"libs.h"
-	"funcionario.h"
+	"funcionario_login.h"
 
 1666662052 c:\users\lucas\onedrive\desktop\projectsunip\app\src\libs.h
 	<stdio.h>
@@ -29,20 +29,21 @@
 	<locale.h>
 	<windows.h>
 
-1666843206 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.c
+1666930547 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.c
 	"submenu.h"
 
 1666662473 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\comettech.c
 	"libs.h"
 
-1666841652 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
+1666930487 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
 	"menu.h"
 
-1666841308 c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.h
+1666930284 c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.h
 	"libs.h"
+	"submenu_gerencia.h"
 	"submenu.h"
 
-1666841347 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.h
+1666931237 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.h
 	"libs.h"
 	"menu.h"
 
@@ -52,37 +53,16 @@
 1666844268 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario.h
 	"libs.h"
 
-1666874738 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\comettech.c
+1666927254 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.h
 	"libs.h"
 
-1666874738 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\libs.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<locale.h>
-	<windows.h>
-
-1666874738 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\login.c
+1666928285 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.c
 	"login.h"
 
-1666874738 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\login.h
-	"libs.h"
-	"funcionario.h"
-
-1666885751 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\funcionario.h
-	"libs.h"
-
-1666874738 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\menu.c
-	"menu.h"
-
-1666874738 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\menu.h
-	"libs.h"
-	"submenu.h"
-
-1666874738 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\submenu.h
+1666929139 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
 	"libs.h"
 	"menu.h"
 
-1666885861 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\submenu.c
-	"submenu.h"
+1666929403 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.c
+	"submenu_gerencia.h"
 

@@ -2,7 +2,7 @@
 #define LOGIN_H
 
 #include "libs.h"
-#include "funcionario.h"
+#include "funcionario_login.h"
 
 void login();
 void VerificarLogin(char *usuario, char *senha);

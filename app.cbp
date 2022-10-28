@@ -25,10 +25,10 @@
 		<Unit filename="src/cometTech.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/funcionario.c">
+		<Unit filename="src/funcionario_login.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src/funcionario.h" />
+		<Unit filename="src/funcionario_login.h" />
 		<Unit filename="src/libs.h" />
 		<Unit filename="src/login.c">
 			<Option compilerVar="CC" />
@@ -42,6 +42,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/submenu.h" />
+		<Unit filename="src/submenu_gerencia.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/submenu_gerencia.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

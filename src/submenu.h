@@ -4,5 +4,10 @@
 #include "libs.h"
 #include "menu.h"
 
-void MenuCadastro();
-#endif // SUBMENU_H
+void MenuCliente();
+
+void MenuProduto();
+
+void MenuVenda();
+
+#endif //SUBMENU_H

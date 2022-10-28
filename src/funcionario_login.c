@@ -1,10 +1,10 @@
-#include "funcionario.h"
+#include "login.h"
 
-void BaseFuncionario() {
+void BaseFuncionarioLogin() {
 
-    fp = fopen(ARQ_FUNCIONARIO, "r+b");
+    fp = fopen(ARQ_FUNCIONARIO_LOGIN, "r+b");
     if(fp == NULL) {
-        fp = fopen(ARQ_FUNCIONARIO, "w+b");
+        fp = fopen(ARQ_FUNCIONARIO_LOGIN, "w+b");
         if(fp == NULL) {
             printf(" Erro fatal: impossível criar arquivo de dados\n");
             exit(1);
@@ -12,65 +12,58 @@ void BaseFuncionario() {
     }
 }
 
-void InicializarFuncionario(Funcionario *funcionario) {
-    strcpy(funcionario->cod, "");
-    strcpy(funcionario->nome, "");
-    strcpy(funcionario->cpf, "");
-    strcpy(funcionario->usuario, "");
-    strcpy(funcionario->senha, "");
-    funcionario->ativo = 1;
-    funcionario->tipo = 1;
+void InicializarFuncionarioLogin(FuncionarioLogin *fLogin) {
+    strcpy(fLogin->cod, "");
+    strcpy(fLogin->nome, "");
+    strcpy(fLogin->usuario, "");
+    strcpy(fLogin->senha, "");
+    fLogin->ativo = 1;
+    fLogin->tipo = 1;
 }
 
-void LerFuncionario(Funcionario *funcionario) {
-    sprintf(funcionario->cod, "%i", CarregarCodigoFuncionario());
-    printf(" Código: %s", funcionario->cod);
+void LerFuncionarioLogin(FuncionarioLogin *fLogin) {
+    sprintf(fLogin->cod, "%i", CarregarCodigoFuncionarioLogin());
+    printf(" Código: %s", fLogin->cod);
 
     printf("\n Nome: ");
     fflush(stdin);
-    fgets(funcionario->nome, MAX, stdin);
-    funcionario->nome[strlen(funcionario->nome) - 1] = '\0';
-
-    printf("\n CPF: ");
-    fflush(stdin);
-    fgets(funcionario->cpf, MIN, stdin);
-    funcionario->cpf[strlen(funcionario->cpf) - 1] = '\0';
+    fgets(fLogin->nome, MAX, stdin);
+    fLogin->nome[strlen(fLogin->nome) - 1] = '\0';
 
     printf("\n Usuário: ");
     fflush(stdin);
-    fgets(funcionario->usuario, MAX, stdin);
-    funcionario->usuario[strlen(funcionario->usuario) - 1] = '\0';
+    fgets(fLogin->usuario, MAX, stdin);
+    fLogin->usuario[strlen(fLogin->usuario) - 1] = '\0';
 
     printf("\n Senha: ");
     fflush(stdin);
-    fgets(funcionario->senha, MIN, stdin);
-    funcionario->senha[strlen(funcionario->senha) - 1] = '\0';
+    fgets(fLogin->senha, MIN, stdin);
+    fLogin->senha[strlen(fLogin->senha) - 1] = '\0';
 }
 
-void ExibirFuncionario(Funcionario *funcionario) {
-    printf("\n Código: %s", funcionario->cod);
-    printf("\n Nome: %s", funcionario->nome);
-    printf("\n CPF: %s", funcionario->cpf);
-    printf("\n Usuário: %s", funcionario->usuario);
-    printf("\n Senha: %s", funcionario->senha);
+void ExibirFuncionarioLogin(FuncionarioLogin *fLogin) {
+    printf("\n Código: %s", fLogin->cod);
+    printf("\n Nome: %s", fLogin->nome);
+    printf("\n Usuário: %s", fLogin->usuario);
+    printf("\n Senha: %s", fLogin->senha);
 }
 
-void CadastrarFuncionario() {
-    Funcionario funcionario;
+void CadastrarFuncionarioLogin() {
+    FuncionarioLogin fLogin;
     int op;
-    InicializarFuncionario(&funcionario);
-    LerFuncionario(&funcionario);
+    InicializarFuncionarioLogin(&fLogin);
+    LerFuncionarioLogin(&fLogin);
 
     while(1) {
         system("cls");
-        ExibirFuncionario(&funcionario);
+        ExibirFuncionarioLogin(&fLogin);
         printf("\n\n 1 - SALVAR  2 - ALTERAR  3 - SAIR \n Selecione a opção: ");
         scanf("%i", &op);
 
         if(op == 1) {
-            BaseFuncionario();
+            BaseFuncionarioLogin();
             fseek(fp, 0, SEEK_END);
-            if(fwrite(&funcionario, sizeof(Funcionario), 1, fp) == 0) {
+            if(fwrite(&fLogin, sizeof(FuncionarioLogin), 1, fp) == 0) {
                 printf("Erro ao gravar o registro! \n\n");
                 printf("\n Pressione alguma tecla para continuar.");
                 getch();
@@ -86,35 +79,29 @@ void CadastrarFuncionario() {
             while(1) {
                 system("cls");
                 printf("ALTERAR \n\n");
-                ExibirFuncionario(&funcionario);
-                printf("\n 1 - NOME  2 - CPF  3 - USUÁRIO  4 - SENHA  5 - VOLTAR\n");
+                ExibirFuncionarioLogin(&fLogin);
+                printf("\n 1 - NOME  2 - USUÁRIO  3 - SENHA  4 - VOLTAR\n");
                 scanf("%i", &op);
 
                 if(op == 1) {
                     printf("Nome: ");
                     fflush(stdin);
-                    fgets(funcionario.nome, MAX, stdin);
+                    fgets(fLogin.nome, MAX, stdin);
                 }
 
                 if(op == 2) {
-                    printf("CPF: ");
+                    printf("Usuário: ");
                     fflush(stdin);
-                    fgets(funcionario.cpf, MIN, stdin);
+                    fgets(fLogin.usuario, MAX, stdin);
                 }
 
                 if(op == 3) {
-                    printf("Usuário: ");
+                    printf("Senha: ");
                     fflush(stdin);
-                    fgets(funcionario.usuario, MAX, stdin);
+                    fgets(fLogin.senha, MAX, stdin);
                 }
 
                 if(op == 4) {
-                    printf("Senha: ");
-                    fflush(stdin);
-                    fgets(funcionario.senha, MAX, stdin);
-                }
-
-                if(op == 5) {
                     fflush(stdin);
                     break;
                 }
@@ -132,24 +119,24 @@ void CadastrarFuncionario() {
     }
 }
 
-void ListarFuncionario() {
-    BaseFuncionario();
-    Funcionario funcionario;
-    InicializarFuncionario(&funcionario);
+void ListarFuncionarioLogin() {
+    BaseFuncionarioLogin();
+    FuncionarioLogin fLogin;
+    InicializarFuncionarioLogin(&fLogin);
     int linha = 0;
     rewind(fp);
 
     while(!feof(fp)) {
-        if(fread(&funcionario, sizeof(Funcionario), 1, fp) != 1) {
+        if(fread(&fLogin, sizeof(FuncionarioLogin), 1, fp) != 1) {
             break;
         }
-        if(funcionario.ativo == 0) {
+        if(fLogin.ativo == 0) {
             continue;
         }
-        if(funcionario.tipo == 0) {
+        if(fLogin.tipo == 0) {
             continue;
         }
-        ExibirFuncionario(&funcionario);
+        ExibirFuncionarioLogin(&fLogin);
         printf("\n ++++++++++++++++ \n");
         linha++;
     }
@@ -161,10 +148,10 @@ void ListarFuncionario() {
     getche();
 }
 
-int PesquisarFuncionario() {
-    BaseFuncionario();
-    Funcionario funcionario;
-    InicializarFuncionario(&funcionario);
+int PesquisarFuncionarioLogin() {
+    BaseFuncionarioLogin();
+    FuncionarioLogin fLogin;
+    InicializarFuncionarioLogin(&fLogin);
 
     char valor[MAX];
     strcpy(valor,"");
@@ -174,7 +161,7 @@ int PesquisarFuncionario() {
     rewind(fp);
 
     while(!feof(fp)) {
-        printf("Digite o nome ou cpf a ser procurado: ");
+        printf("Digite o nome ou usuário a ser procurado: ");
         fflush(stdin);
         fgets(valor, MAX, stdin);
         valor[strlen(valor) - 1] = '\0';
@@ -182,9 +169,9 @@ int PesquisarFuncionario() {
         if(strlen(valor) < 1) {
             printf("Nome Inválido! \n\n");
         } else {
-            while(fread(&funcionario, sizeof(Funcionario), 1, fp)) {
-                if(funcionario.ativo != 0 && strstr(funcionario.nome,valor) || funcionario.ativo != 0 && strstr(funcionario.cpf,valor)) {
-                    ExibirFuncionario(&funcionario);
+            while(fread(&fLogin, sizeof(FuncionarioLogin), 1, fp)) {
+                if(fLogin.ativo != 0 && strstr(fLogin.nome,valor) || fLogin.ativo != 0 && strstr(fLogin.usuario,valor)) {
+                    ExibirFuncionarioLogin(&fLogin);
                     pos = 1;
                     printf("\n\n Pressione ENTER para continuar.");
                     getche();
@@ -204,29 +191,29 @@ int PesquisarFuncionario() {
     fclose(fp);
 }
 
-void ExcluirFuncionario() {
-    BaseFuncionario();
-    Funcionario funcionario;
-    InicializarFuncionario(&funcionario);
+void ExcluirFuncionarioLogin() {
+    BaseFuncionarioLogin();
+    FuncionarioLogin fLogin;
+    InicializarFuncionarioLogin(&fLogin);
 
     int pos = 0, op;
 
-    pos = PesquisarFuncionario();
+    pos = PesquisarFuncionarioLogin();
 
-    fseek(fp, pos*sizeof(Funcionario), SEEK_SET);
+    fseek(fp, pos*sizeof(FuncionarioLogin), SEEK_SET);
 
-    if(fread(&funcionario, sizeof(Funcionario), 1, fp)== 1){
+    if(fread(&fLogin, sizeof(FuncionarioLogin), 1, fp)== 1){
         while(1) {
             system("cls");
-            ExibirFuncionario(&funcionario);
+            ExibirFuncionarioLogin(&fLogin);
             printf("\n\n 1 - EXCLUIR  2 -SAIR \n Selecione uma opção: ");
             scanf("%i", &op);
 
             if(op == 1) {
-                funcionario.ativo = 0;
-                fseek(fp, pos*sizeof(Funcionario), SEEK_SET);
+                fLogin.ativo = 0;
+                fseek(fp, pos*sizeof(FuncionarioLogin), SEEK_SET);
 
-                if(fwrite(&funcionario, sizeof(Funcionario), 1, fp) != 1) {
+                if(fwrite(&fLogin, sizeof(FuncionarioLogin), 1, fp) != 1) {
                     printf("\n Falha ao excluir o registro!\n");
                     printf("\n\n Pressione ENTER para continuar.");
                     getche();
@@ -247,50 +234,44 @@ void ExcluirFuncionario() {
 }
 
 void AlterarFuncionario() {
-    BaseFuncionario();
-    Funcionario funcionario;
+    BaseFuncionarioLogin();
+    FuncionarioLogin fLogin;
 
     int pos, op;
 
-    pos = PesquisarFuncionario();
+    pos = PesquisarFuncionarioLogin();
 
-    fseek(fp, pos*sizeof(Funcionario), SEEK_SET);
+    fseek(fp, pos*sizeof(FuncionarioLogin), SEEK_SET);
 
-    if(fread(&funcionario, sizeof(Funcionario), 1, fp) == 1) {
+    if(fread(&fLogin, sizeof(FuncionarioLogin), 1, fp) == 1) {
         while(1) {
             system("cls");
             printf(" ++++++++++ ALTERAR FUNCIONÁRIO ++++++++++\n");
-            ExibirFuncionario(&funcionario);
-            printf("\n 1 - NOME  2 - CPF  3 - USUÁRIO  4 - SENHA  5 - SALVAR  6 - SAIR \n");
+            ExibirFuncionarioLogin(&fLogin);
+            printf("\n 1 - NOME  2 - USUÁRIO  3 - SENHA  4 - SALVAR  5 - SAIR \n");
             scanf("%i", &op);
 
             if(op == 1) {
                 printf("Nome: ");
                 fflush(stdin);
-                fgets(funcionario.nome, MAX, stdin);
+                fgets(fLogin.nome, MAX, stdin);
             }
 
             if(op == 2) {
-                printf("CPF: ");
+                printf("Usuário: ");
                 fflush(stdin);
-                fgets(funcionario.cpf, MIN, stdin);
+                fgets(fLogin.usuario, MAX, stdin);
             }
 
             if(op == 3) {
-                printf("Usuário: ");
+                printf("Senha: ");
                 fflush(stdin);
-                fgets(funcionario.usuario, MAX, stdin);
+                fgets(fLogin.senha, MIN, stdin);
             }
 
             if(op == 4) {
-                printf("Senha: ");
-                fflush(stdin);
-                fgets(funcionario.senha, MIN, stdin);
-            }
-
-            if(op == 5) {
-                fseek(fp, pos*sizeof(Funcionario), SEEK_SET);
-                if(fwrite(&funcionario, sizeof(Funcionario), 1, fp) != 1) {
+                fseek(fp, pos*sizeof(FuncionarioLogin), SEEK_SET);
+                if(fwrite(&fLogin, sizeof(FuncionarioLogin), 1, fp) != 1) {
                     printf("\n Falha ao Alterar o registro!\n");
                     printf("\n\n Pressione ENTER para continuar.");
                     getche();
@@ -312,15 +293,15 @@ void AlterarFuncionario() {
     fclose(fp);
 }
 
-int CarregarCodigoFuncionario() {
-    BaseFuncionario();
-    Funcionario funcionario;
+int CarregarCodigoFuncionarioLogin() {
+    BaseFuncionarioLogin();
+    FuncionarioLogin fLogin;
 
     int linha = 0;
     rewind(fp);
 
     while(!feof(fp)) {
-        if(fread(&funcionario, sizeof(Funcionario), 1, fp)!=1) {
+        if(fread(&fLogin, sizeof(FuncionarioLogin), 1, fp)!=1) {
             break;
         }
         linha++;
