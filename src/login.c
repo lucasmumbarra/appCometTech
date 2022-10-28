@@ -21,33 +21,34 @@ void login() {
         fgets(senha, sizeof(senha), stdin);
         senha[strlen(senha) - 1] = '\0';
 
+        // MenuGerencia();
         VerificarLogin(usuario,senha);
     }
 }
 
 void VerificarLogin(char *usuario, char *senha) {
-    BaseFuncionario();
-    Funcionario funcionario;
-    InicializarFuncionario(&funcionario);
+    BaseFuncionarioLogin();
+    FuncionarioLogin fLogin;
+    InicializarFuncionarioLogin(&fLogin);
     int linha = 0, confirm = 0;
 
     rewind(fp);
     while(1) {
-        if(fread(&funcionario, sizeof(Funcionario), 1, fp) != 1) {
+        if(fread(&fLogin, sizeof(FuncionarioLogin), 1, fp) != 1) {
             break;
         }
-        if(funcionario.ativo == 0) {
+        if(fLogin.ativo == 0) {
             continue;
         }
-        if(strcmp(funcionario.usuario,usuario) == 0 && funcionario.ativo == 1) {
-            if(strcmp(funcionario.senha,senha) == 0) {
-                if(funcionario.tipo == 2) {
+        if(strcmp(fLogin.usuario,usuario) == 0 && fLogin.ativo == 1) {
+            if(strcmp(fLogin.senha,senha) == 0) {
+                if(fLogin.tipo == 2) {
                     system("cls");
                     printf("Menu em desenvolvimento");
                     system("pause");
                 } else {
                     system("cls");
-                    MenuGerencia(&funcionario);
+                    MenuGerencia(&fLogin);
                 }
             } else {
                 printf("\ SENHA INVÁLIDA! Pressione enter para continuar.");

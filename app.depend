@@ -15,12 +15,12 @@
 1666661946 c:\users\lucas\onedrive\desktop\projectsunip\app\login.h
 	"libs.h"
 
-1666841786 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.c
+1666927007 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.c
 	"login.h"
 
-1666841620 c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.h
+1666926146 c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.h
 	"libs.h"
-	"funcionario.h"
+	"funcionario_login.h"
 
 1666662052 c:\users\lucas\onedrive\desktop\projectsunip\app\src\libs.h
 	<stdio.h>
@@ -29,13 +29,13 @@
 	<locale.h>
 	<windows.h>
 
-1666843206 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.c
+1666927140 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.c
 	"submenu.h"
 
 1666662473 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\comettech.c
 	"libs.h"
 
-1666841652 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
+1666926862 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
 	"menu.h"
 
 1666841308 c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.h
@@ -51,4 +51,10 @@
 
 1666844268 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario.h
 	"libs.h"
+
+1666927254 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.h
+	"libs.h"
+
+1666926039 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.c
+	"login.h"
 

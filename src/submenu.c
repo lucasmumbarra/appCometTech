@@ -93,7 +93,7 @@ void Cadastro() {
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                   COMET TECH - CADASTRAR FUNCIONÁRIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            CadastrarFuncionario();
+            CadastrarFuncionarioLogin();
             break;
         case 3:
             system("cls");
@@ -144,7 +144,7 @@ void Listar() {
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                   COMET TECH - LISTAR FUNCIONÁRIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            ListarFuncionario();
+            ListarFuncionarioLogin();
             break;
         case 3:
             system("cls");
@@ -195,7 +195,7 @@ void Pesquisar() {
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                   COMET TECH - PESQUISAR FUNCIONÁRIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            PesquisarFuncionario();
+            PesquisarFuncionarioLogin();
             break;
         case 3:
             system("cls");
@@ -246,7 +246,7 @@ void Excluir() {
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                   COMET TECH - EXCLUIR FUNCIONÁRIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            ExcluirFuncionario();
+            ExcluirFuncionarioLogin();
             break;
         case 3:
             system("cls");
