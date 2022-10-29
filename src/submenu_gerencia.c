@@ -44,7 +44,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - CADASTRAR FUNCIONARIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            CadastrarFuncionario();
             break;
         case 3:
             system("cls");
@@ -58,7 +58,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - PESQUISAR FUNCIONARIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            PesquisarFuncionario();
             break;
         case 5:
             system("cls");
@@ -72,7 +72,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - LISTAR FUNCIONARIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ListarFuncionario();
             break;
         case 7:
             system("cls");
@@ -86,7 +86,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                 COMET TECH - ALTERAR FUNCIONARIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            AlterarFuncionario();
             break;
         case 9:
             system("cls");
@@ -100,7 +100,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                 COMET TECH - EXCLUIR FUNCIONARIO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ExcluirFuncionario();
             break;
         case 0:
             system("cls");

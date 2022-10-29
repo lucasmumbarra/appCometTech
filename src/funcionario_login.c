@@ -1,4 +1,4 @@
-#include "login.h"
+#include "funcionario_login.h"
 
 void BaseFuncionarioLogin()
 {
@@ -56,7 +56,7 @@ void ExibirFuncionarioLogin(FuncionarioLogin *fLogin)
     printf("\n Código: %s", fLogin->cod);
     printf("\n Nome: %s", fLogin->nome);
     printf("\n Usuário: %s", fLogin->usuario);
-    printf("\n Senha: %s", fLogin->senha);
+    printf("\n Senha: %s", fLogin->senha);  
     if(fLogin->tipo == 1) {
         printf("\n Função: Administrador");
     }
