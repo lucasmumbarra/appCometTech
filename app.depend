@@ -35,7 +35,7 @@
 1666662473 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\comettech.c
 	"libs.h"
 
-1667056913 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
+1667061192 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
 	"menu.h"
 
 1666932964 c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.h
@@ -53,16 +53,26 @@
 1666844268 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario.h
 	"libs.h"
 
-1666932964 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.h
+1667061561 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.h
 	"libs.h"
+	"submenu_gerencia.h"
 
-1667056792 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.c
+1667061374 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.c
 	"login.h"
 
-1667055537 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
+1667060390 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
 	"libs.h"
 	"menu.h"
+	"funcionario_login.h"
+	"erros.h"
 
-1667056403 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.c
+1667060276 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.c
 	"submenu_gerencia.h"
+
+1667060335 c:\users\lucas\onedrive\desktop\projectsunip\app\src\erros.h
+	"libs.h"
+	"submenu_gerencia.h"
+
+1667060628 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\erros.c
+	"erros.h"
 

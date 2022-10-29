@@ -2,6 +2,7 @@
 #define FUNCIONARIO_LOGIN_H
 
 #include "libs.h"
+#include "submenu_gerencia.h"
 
 #define MAX 250
 #define MIN 30
@@ -34,4 +35,6 @@ void ListarFuncionarioLogin();
 int PesquisarFuncionarioLogin();
 
 void ExcluirFuncionarioLogin();
+
+void AlterarFuncionarioLogin();
 #endif // FUNCIONARIO_LOGIN_H

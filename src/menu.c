@@ -59,23 +59,23 @@ void MenuGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                               ENCERRAR   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            EncerrarPrograma();
+            EncerrarProgramaGerencia();
             break;
         }
     } while (op != 0);
 }
 
-void EncerrarPrograma()
+void EncerrarProgramaGerencia()
 {
     int op;
 
-    printf("\nVocê Deseja realmente sair?\n");
-    printf("\n 1 - SIM, SAIR!  2 - NÃO\n Selecione uma opção: ");
+    printf("\nVocê Deseja realmente encerrar o programa?\n");
+    printf("\n 1 - SIM, ENCERRAR!  2 - NÃO\n Selecione uma opção: ");
     scanf("%i", &op);
 
     if (op == 1)
     {
-        system("taskkill /IM app.exe");
+        exit(EXIT_SUCCESS);
     }
     if (op == 2)
     {

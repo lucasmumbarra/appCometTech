@@ -3,6 +3,8 @@
 
 #include "libs.h"
 #include "menu.h"
+#include "funcionario_login.h"
+#include "erros.h"
 
 void MenuFuncionarioGerencia();
 void MenuClienteGerencia();

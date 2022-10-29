@@ -65,7 +65,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                     COMET TECH - LISTAR LOGIN\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ListarFuncionarioLogin();
             break;
         case 6:
             system("cls");
@@ -79,7 +79,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                    COMET TECH - ALTERAR LOGIN\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            AlterarFuncionarioLogin();
             break;
         case 8:
             system("cls");
@@ -93,7 +93,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                   COMET TECH - EXCLUIR LOGIN\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ExcluirFuncionarioLogin();
             break;
         case 10:
             system("cls");
@@ -105,6 +105,10 @@ void MenuFuncionarioGerencia()
         case 0:
             system("cls");
             MenuGerencia();
+            break;
+        default:
+            system("cls");
+            MensagemErroMenuFuncionarioGerencia();
             break;
         }
     } while (op != 0);

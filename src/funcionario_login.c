@@ -295,7 +295,7 @@ void ExcluirFuncionarioLogin()
     fclose(fp);
 }
 
-void AlterarFuncionario()
+void AlterarFuncionarioLogin()
 {
     BaseFuncionarioLogin();
     FuncionarioLogin fLogin;
@@ -313,7 +313,7 @@ void AlterarFuncionario()
             system("cls");
             printf(" ++++++++++ ALTERAR FUNCIONÁRIO ++++++++++\n");
             ExibirFuncionarioLogin(&fLogin);
-            printf("\n 1 - NOME  2 - USUÁRIO  3 - SENHA  4 - SALVAR  5 - SAIR \n");
+            printf("\n 1 - NOME  2 - USUÁRIO  3 - SENHA  4 - FUNÇÃO  5 - SALVAR  6 - SAIR \n Selecione uma opção: ");
             scanf("%i", &op);
 
             if (op == 1)
@@ -339,6 +339,14 @@ void AlterarFuncionario()
 
             if (op == 4)
             {
+                printf("\n Selecione a função do funcionário:\n 1 - Administrador  2 - Vendedor");
+                printf("\n Função: ");
+                fflush(stdin);
+                scanf("%i", &fLogin.tipo);
+            }
+
+            if (op == 5)
+            {
                 fseek(fp, pos * sizeof(FuncionarioLogin), SEEK_SET);
                 if (fwrite(&fLogin, sizeof(FuncionarioLogin), 1, fp) != 1)
                 {
@@ -359,7 +367,7 @@ void AlterarFuncionario()
             if (op == 6)
             {
                 printf("\n SAINDO \n");
-                Sleep(1);
+                MenuFuncionarioGerencia();
             }
         }
     }
