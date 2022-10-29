@@ -3,7 +3,7 @@
 void MenuGerencia()
 {
 
-    int op, validacaoGerencia = 1;
+    int op;
 
     do
     {
@@ -31,7 +31,7 @@ void MenuGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                        COMET TECH - CLIENTE   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            MenuCliente();
+            MenuClienteGerencia();
             break;
         case 2:
             system("cls");
@@ -45,14 +45,14 @@ void MenuGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                        COMET TECH - PRODUTO   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            MenuProduto();
+            MenuProdutoGerencia();
             break;
         case 4:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                          COMET TECH - VENDAS   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            MenuVenda();
+            MenuVendaGerencia();
             break;
         case 0:
             system("cls");
