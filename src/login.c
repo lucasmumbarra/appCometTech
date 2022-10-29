@@ -44,7 +44,7 @@ void VerificarLogin(char *usuario, char *senha) {
             if(strcmp(fLogin.senha,senha) == 0) {
                 if(fLogin.tipo == 2) {
                     system("cls");
-                    printf("Menu em desenvolvimento");
+                    printf("Menu em desenvolvimento\n");
                     system("pause");
                 } else {
                     system("cls");

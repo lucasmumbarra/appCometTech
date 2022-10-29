@@ -37,7 +37,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                    COMET TECH - CADASTRAR LOGIN\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            CadastrarFuncionarioLogin();
             break;
         case 2:
             system("cls");
@@ -51,7 +51,7 @@ void MenuFuncionarioGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                     COMET TECH - PESQUISAR LOGIN\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            PesquisarFuncionarioLogin();
             break;
         case 4:
             system("cls");
