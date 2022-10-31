@@ -25,6 +25,14 @@
 		<Unit filename="src/cometTech.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src/erros.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/erros.h" />
+		<Unit filename="src/funcionario.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/funcionario.h" />
 		<Unit filename="src/funcionario_login.c">
 			<Option compilerVar="CC" />
 		</Unit>
