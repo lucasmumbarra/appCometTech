@@ -7,7 +7,7 @@
 #define MIN 30
 #define MAX_ENDERECO 2500
 
-#define ARQ_FUNCIONARIO "clientes.txt"
+#define ARQ_CLIENTE "clientes.txt"
 
 FILE *fp;
 
@@ -18,8 +18,9 @@ typedef struct
   char cnpj[MIN];
   int categoria;
   char telefone[MIN];
+  char emailCorp[MAX];
   char endereco[MAX_ENDERECO];
-  char nomeResponsável[MAX];
+  char nomeResponsavel[MAX];
   char emailResponsavel[MAX];
   char telefoneResponsavel[MIN];
   int ativo;
