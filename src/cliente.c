@@ -83,7 +83,7 @@ void LerCliente(Cliente *cliente)
 
 void ExibirCliente(Cliente *cliente)
 {
-  printf("\n Código: %s", cliente->cod);
+  printf("\n Código: CLI%s", cliente->cod);
   printf("\n Razão social: %s", cliente->razaoSocial);
   printf("\n CNPJ: %s", cliente->cnpj);
   if (cliente->categoria == 1)
@@ -299,7 +299,7 @@ int PesquisarCliente()
     {
       while (fread(&cliente, sizeof(Cliente), 1, fp))
       {
-        if (cliente.ativo != 0 && strstr(cliente.razaoSocial, valor) || cliente.ativo != 0 && strstr(cliente.cnpj, valor || cliente.ativo != 0 && strstr(cliente.cod, valor)))
+        if (cliente.ativo != 0 && strstr(cliente.razaoSocial, valor) || cliente.ativo != 0 && strstr(cliente.cnpj, valor) || cliente.ativo != 0 && strstr(cliente.cod, valor))
         {
           ExibirCliente(&cliente);
           pos = 1;

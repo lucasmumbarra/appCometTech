@@ -15,7 +15,7 @@
 1666661946 c:\users\lucas\onedrive\desktop\projectsunip\app\login.h
 	"libs.h"
 
-1667056957 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.c
+1667182796 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.c
 	"login.h"
 
 1666932964 c:\users\lucas\onedrive\desktop\projectsunip\app\src\login.h
@@ -35,7 +35,7 @@
 1666662473 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\comettech.c
 	"libs.h"
 
-1667061192 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
+1667182796 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
 	"menu.h"
 
 1666932964 c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.h
@@ -47,7 +47,7 @@
 	"libs.h"
 	"menu.h"
 
-1667070884 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario.c
+1667182796 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario.c
 	"funcionario.h"
 
 1667182796 c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario.h
@@ -57,23 +57,30 @@
 	"libs.h"
 	"submenu_gerencia.h"
 
-1667069202 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.c
+1667182796 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.c
 	"funcionario_login.h"
 
-1667182796 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
+1667359922 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
 	"libs.h"
 	"menu.h"
 	"funcionario_login.h"
 	"funcionario.h"
+	"cliente.h"
 	"erros.h"
 
-1667070348 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.c
+1667359990 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.c
 	"submenu_gerencia.h"
 
 1667182796 c:\users\lucas\onedrive\desktop\projectsunip\app\src\erros.h
 	"libs.h"
 	"submenu_gerencia.h"
 
-1667060628 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\erros.c
+1667182796 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\erros.c
 	"erros.h"
+
+1667360417 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\cliente.c
+	"cliente.h"
+
+1667354913 c:\users\lucas\onedrive\desktop\projectsunip\app\src\cliente.h
+	"libs.h"
 
