@@ -22,6 +22,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="src/cliente.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cliente.h" />
 		<Unit filename="src/cometTech.c">
 			<Option compilerVar="CC" />
 		</Unit>

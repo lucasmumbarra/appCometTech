@@ -146,35 +146,35 @@ void MenuClienteGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - CADASTRAR CLIENTE\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            CadastrarCliente();
             break;
         case 2:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - PESQUISAR CLIENTE\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            PesquisarCliente();
             break;
         case 3:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - LISTAR CLIENTE\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ListarCliente();
             break;
         case 4:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                 COMET TECH - ALTERAR CLIENTE\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            AlterarCliente();
             break;
         case 5:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                 COMET TECH - EXCLUIR CLIENTE\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ExcluirCliente();
             break;
         case 0:
             system("cls");
