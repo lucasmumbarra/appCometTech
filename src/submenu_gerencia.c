@@ -216,14 +216,14 @@ void MenuProdutoGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - CADASTRAR PRODUTO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            CadastrarProduto();
             break;
         case 2:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - PESQUISAR PRODUTO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            PesquisarProduto();
             break;
         case 3:
             system("cls");

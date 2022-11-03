@@ -6,6 +6,7 @@
 #include "funcionario_login.h"
 #include "funcionario.h"
 #include "cliente.h"
+#include "produto.h"
 #include "erros.h"
 
 void MenuFuncionarioGerencia();

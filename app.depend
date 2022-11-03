@@ -60,7 +60,7 @@
 1667182796 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.c
 	"funcionario_login.h"
 
-1667359922 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
+1667434332 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
 	"libs.h"
 	"menu.h"
 	"funcionario_login.h"
@@ -68,7 +68,7 @@
 	"cliente.h"
 	"erros.h"
 
-1667359990 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.c
+1667433762 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.c
 	"submenu_gerencia.h"
 
 1667182796 c:\users\lucas\onedrive\desktop\projectsunip\app\src\erros.h
@@ -78,9 +78,21 @@
 1667182796 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\erros.c
 	"erros.h"
 
-1667360417 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\cliente.c
+1667406374 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\cliente.c
 	"cliente.h"
 
-1667354913 c:\users\lucas\onedrive\desktop\projectsunip\app\src\cliente.h
+1667360953 c:\users\lucas\onedrive\desktop\projectsunip\app\src\cliente.h
 	"libs.h"
+
+1667434220 c:\users\lucas\onedrive\desktop\projectsunip\app\src\produto.h
+	"libs.h"
+
+1667426873 c:\users\lucas\onedrive\desktop\projectsunip\app\src\produtomensagem.h
+	"libs.h"
+
+1667434167 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\produto.c
+	"produto.h"
+
+1667427104 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\produtomensagem.c
+	"produtoMensagem.h"
 

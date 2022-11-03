@@ -33,7 +33,7 @@ void InicializarCliente(Cliente *cliente)
 void LerCliente(Cliente *cliente)
 {
   sprintf(cliente->cod, "%i", CarregarCodigoCliente());
-  printf(" Código: CLI%s", cliente->cod);
+  printf(" Código: %s", cliente->cod);
 
   printf("\n Razão social: ");
   fflush(stdin);
@@ -45,7 +45,7 @@ void LerCliente(Cliente *cliente)
   fgets(cliente->cnpj, MIN, stdin);
   cliente->cnpj[strlen(cliente->cnpj) - 1] = '\0';
 
-  printf("\n Selecione a categoria do cliente:\n 1 - Lanchonete  2 - Restaurante  3 - Bar");
+  printf("\n Selecione a categoria do cliente:\n 1 - Restaurante  2 - Delivery  3 - Hamburgueria  4 - Pizzaria");
   printf("\n Categoria: ");
   fflush(stdin);
   scanf("%i", &cliente->categoria);
@@ -83,20 +83,24 @@ void LerCliente(Cliente *cliente)
 
 void ExibirCliente(Cliente *cliente)
 {
-  printf("\n Código: CLI%s", cliente->cod);
+  printf("\n Código: %s", cliente->cod);
   printf("\n Razão social: %s", cliente->razaoSocial);
   printf("\n CNPJ: %s", cliente->cnpj);
   if (cliente->categoria == 1)
   {
-    printf("\n Categoria: Lanchonete");
+    printf("\n Categoria: Restaurante");
   }
   if (cliente->categoria == 2)
   {
-    printf("\n Categoria: Restaurante");
+    printf("\n Categoria: Delivery");
   }
   if (cliente->categoria == 3)
   {
-    printf("\n Categoria: Bar");
+    printf("\n Categoria: Hamburgueria");
+  }
+  if (cliente->categoria == 4)
+  {
+    printf("\n Categoria: Pizzaria");
   }
   printf("\n Telefone: %s", cliente->telefone);
   printf("\n E-mail corporativo: %s", cliente->emailCorp);
@@ -166,7 +170,7 @@ void CadastrarCliente()
 
         if (op == 3)
         {
-          printf("\n Selecione a categoria do cliente:\n 1 - Lanchonete  2 - Restaurante  3 - Bar");
+          printf("\n Selecione a categoria do cliente:\n 1 - Restaurante  2 - Delivery  3 - Hamburgueria  4 - Pizzaria");
           printf("\n Categoria: ");
           fflush(stdin);
           scanf("%i", &cliente.categoria);
@@ -410,7 +414,7 @@ void AlterarCliente()
 
         if (op == 3)
         {
-          printf("\n Selecione a categoria do cliente:\n 1 - Lanchonete  2 - Restaurante  3 - Bar");
+          printf("\n Selecione a categoria do cliente:\n 1 - Restaurante  2 - Delivery  3 - Hamburgueria  4 - Pizzaria");
           printf("\n Categoria: ");
           fflush(stdin);
           scanf("%i", &cliente.categoria);

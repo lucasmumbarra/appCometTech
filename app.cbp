@@ -50,6 +50,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/menu.h" />
+		<Unit filename="src/produto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/produto.h" />
+		<Unit filename="src/produtoMensagem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/produtoMensagem.h" />
 		<Unit filename="src/submenu.c">
 			<Option compilerVar="CC" />
 		</Unit>
