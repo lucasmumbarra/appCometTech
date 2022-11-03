@@ -3,4 +3,6 @@
 
 #include "libs.h"
 
+void ProdutoLiteDescricao();
+
 #endif // PRODUTO_MENSAGEM_H

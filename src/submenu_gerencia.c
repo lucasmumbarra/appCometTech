@@ -230,21 +230,21 @@ void MenuProdutoGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - LISTAR PRODUTO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ListarProduto();
             break;
         case 4:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                 COMET TECH - ALTERAR PRODUTO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            AlterarProduto();
             break;
         case 5:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                 COMET TECH - EXCLUIR PRODUTO\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ExcluirProduto();
             break;
         case 0:
             system("cls");

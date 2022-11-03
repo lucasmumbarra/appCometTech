@@ -2,6 +2,7 @@
 #define PRODUTO_H
 
 #include "libs.h"
+#include "produtoMensagem.h"
 
 #define MAX 250
 #define MIN 30

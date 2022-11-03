@@ -19,7 +19,7 @@ void MenuGerencia()
         printf(" 2 - FUNCIONÁRIO \n");
         printf(" 3 - PRODUTO \n");
         printf(" 4 - VENDAS \n");
-        printf(" 0 - ENCERRAR \n");
+        printf(" 0 - SAIR \n");
 
         printf("\n Escolha uma das opções acima: ");
         scanf("%d", &op);
@@ -54,31 +54,6 @@ void MenuGerencia()
             printf("\n ////////////////////////////////////////////////////////////////////\n");
             MenuVendaGerencia();
             break;
-        case 0:
-            system("cls");
-            printf(" //////////////////////////////////////////////////////////////////////\n");
-            printf("\n                               ENCERRAR   \n");
-            printf("\n ////////////////////////////////////////////////////////////////////\n");
-            EncerrarProgramaGerencia();
-            break;
         }
     } while (op != 0);
-}
-
-void EncerrarProgramaGerencia()
-{
-    int op;
-
-    printf("\nVocê Deseja realmente encerrar o programa?\n");
-    printf("\n 1 - SIM, ENCERRAR!  2 - NÃO\n Selecione uma opção: ");
-    scanf("%i", &op);
-
-    if (op == 1)
-    {
-        exit(EXIT_SUCCESS);
-    }
-    if (op == 2)
-    {
-        MenuGerencia();
-    }
 }

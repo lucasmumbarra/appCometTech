@@ -96,3 +96,86 @@
 1667427104 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\produtomensagem.c
 	"produtoMensagem.h"
 
+1666874738 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\comettech.c
+	"libs.h"
+
+1666874738 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\libs.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<windows.h>
+
+1667493565 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\cliente.c
+	"cliente.h"
+
+1667493565 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\cliente.h
+	"libs.h"
+
+1667493565 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\erros.c
+	"erros.h"
+
+1667493565 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\erros.h
+	"libs.h"
+	"submenu_gerencia.h"
+
+1667493565 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\submenu_gerencia.h
+	"libs.h"
+	"menu.h"
+	"funcionario_login.h"
+	"funcionario.h"
+	"cliente.h"
+	"produto.h"
+	"erros.h"
+
+1667493565 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\menu.h
+	"libs.h"
+	"submenu_gerencia.h"
+	"submenu.h"
+
+1667493565 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\submenu.h
+	"libs.h"
+	"menu.h"
+
+1667493565 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\funcionario_login.h
+	"libs.h"
+	"submenu_gerencia.h"
+
+1667493565 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\funcionario.h
+	"libs.h"
+
+1667494531 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\produto.h
+	"libs.h"
+	"produtoMensagem.h"
+
+1667493565 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\funcionario.c
+	"funcionario.h"
+
+1667493565 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\funcionario_login.c
+	"funcionario_login.h"
+
+1667493565 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\login.c
+	"login.h"
+
+1667493565 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\login.h
+	"libs.h"
+	"funcionario_login.h"
+
+1667494489 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\menu.c
+	"menu.h"
+
+1667495016 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\produtomensagem.c
+	"produtoMensagem.h"
+
+1667494851 c:\users\lucasmumbarra\desktop\pim\appcomettech\src\produtomensagem.h
+	"libs.h"
+
+1667493565 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\submenu.c
+	"submenu.h"
+
+1667494078 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\produto.c
+	"produto.h"
+
+1667494046 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\submenu_gerencia.c
+	"submenu_gerencia.h"
+

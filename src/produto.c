@@ -20,11 +20,11 @@ void InicializarProduto(Produto *produto)
   strcpy(produto->cod, "");
   strcpy(produto->codProd, "");
   strcpy(produto->nomeProd, "");
-  strcpy(produto->descricao, "");
+  produto->descricao = 0;
   produto->catProd = 0;
-  strcpy(produto->itensInc, "");
-  strcpy(produto->funcProd, "");
-  strcpy(produto->integProd, "");
+  produto->itensInc = 0;
+  produto->funcProd = 0;
+  produto->integProd = 0;
   strcpy(produto->valorProd, "");
   produto->ativo = 1;
   produto->tipo = 0;
@@ -39,7 +39,7 @@ void LerProduto(Produto *produto)
   fflush(stdin);
   fgets(produto->codProd, MIN, stdin);
   produto->codProd[strlen(produto->codProd) - 1] = '\0';
-
+  
   printf("\n Nome produto: ");
   fflush(stdin);
   fgets(produto->nomeProd, MAX, stdin);
@@ -90,7 +90,9 @@ void ExibirProduto(Produto *produto)
 
   if (produto->descricao == 1)
   {
-    printf("\n Lite");
+    printf("\n-----------------");
+    printf("\n Descrição: ");
+    ProdutoLiteDescricao();
   }
   if (produto->descricao == 2)
   {
@@ -100,6 +102,7 @@ void ExibirProduto(Produto *produto)
 
   if (produto->catProd == 1)
   {
+    printf("\n\n-----------------");
     printf("\n Restaurante");
   }
   if (produto->catProd == 2)
