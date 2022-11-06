@@ -96,7 +96,9 @@ void ExibirProduto(Produto *produto)
   }
   if (produto->descricao == 2)
   {
-    printf("\n Pro");
+    printf("\n-----------------");
+    printf("\n Descrição: ");
+    ProdutoProDescricao();
   }
 
 
@@ -128,34 +130,46 @@ void ExibirProduto(Produto *produto)
 
   if (produto->itensInc == 1)
   {
-    printf("\n Lite");
+    printf("\n-----------------");
+    printf("\n Itens Inclusos: ");
+    ItensInclusosLite();
   }
   if (produto->itensInc == 2)
   {
-    printf("\n Pro");
+    printf("\n-----------------");
+    printf("\n Itens Inclusos: ");
+    ItensInclusosPro();
   }
 
 
   if (produto->funcProd == 1)
   {
-    printf("\n Lite");
+    printf("\n-----------------");
+    printf("\n Funcionalidades do produto: ");
+    FuncionalidadeLite();
   }
   if (produto->funcProd == 2)
   {
-    printf("\n Pro");
+    printf("\n-----------------");
+    printf("\n Funcionalidades do produto: ");
+    FuncionalidadePro();
   }
 
 
   if (produto->integProd == 1)
   {
-    printf("\n Lite");
+    printf("\n-----------------");
+    printf("\n Integrações do produto: ");
+    IntegracaoLite();
   }
   if (produto->integProd == 2)
   {
-    printf("\n Pro");
+    printf("\n-----------------");
+    printf("\n Integrações do produto: ");
+    IntegracaoPro();
   }
 
-  printf("\n Valor: %s", produto->valorProd);
+  printf("\n Valor: %s por mês", produto->valorProd);
 }
 
 void CadastrarProduto()
@@ -308,7 +322,9 @@ void ListarProduto()
       continue;
     }
     ExibirProduto(&produto);
-    printf("\n ++++++++++++++++ \n");
+    printf("\n");
+    printf("\n ++++++++++++++++++++++++++++ \n");
+    printf("\n");
     linha++;
   }
 
