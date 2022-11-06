@@ -5,4 +5,12 @@
 
 void ProdutoLiteDescricao();
 
+void ProdutoLiteCategoriaRestaurante();
+
+void ProdutoLiteCategoriaDelivery();
+
+void ProdutoLiteCategoriaHamburgueria();
+
+void ProdutoLiteCategoriaPizzaria();
+
 #endif // PRODUTO_MENSAGEM_H

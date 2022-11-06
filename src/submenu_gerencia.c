@@ -104,7 +104,6 @@ void MenuFuncionarioGerencia()
             break;
         case 0:
             system("cls");
-            MenuGerencia();
             break;
         default:
             system("cls");
@@ -178,7 +177,6 @@ void MenuClienteGerencia()
             break;
         case 0:
             system("cls");
-            MenuGerencia();
             break;
         }
     } while (op != 0);
@@ -248,7 +246,6 @@ void MenuProdutoGerencia()
             break;
         case 0:
             system("cls");
-            MenuGerencia();
             break;
         }
     } while (op != 0);
@@ -318,7 +315,6 @@ void MenuVendaGerencia()
             break;
         case 0:
             system("cls");
-            MenuGerencia();
             break;
         }
     } while (op != 0);

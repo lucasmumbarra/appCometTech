@@ -102,20 +102,27 @@ void ExibirProduto(Produto *produto)
 
   if (produto->catProd == 1)
   {
-    printf("\n\n-----------------");
-    printf("\n Restaurante");
+    printf("\n-----------------");
+    printf("\n Categoria - Restaurante: ");
+    ProdutoLiteCategoriaRestaurante();
   }
   if (produto->catProd == 2)
   {
-    printf("\n Delivery");
+    printf("\n-----------------");
+    printf("\n Categoria - Delivery: ");
+    ProdutoLiteCategoriaDelivery();
   }
   if (produto->catProd == 3)
   {
-    printf("\n Hamburgueria");
+    printf("\n-----------------");
+    printf("\n Categoria - Hamburgueria: ");
+    ProdutoLiteCategoriaHamburgueria();
   }
   if (produto->catProd == 4)
   {
-    printf("\n Pizzaria");
+    printf("\n-----------------");
+    printf("\n Categoria - Pizzaria: ");
+    ProdutoLiteCategoriaPizzaria();
   }
 
 
