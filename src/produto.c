@@ -39,7 +39,7 @@ void LerProduto(Produto *produto)
   fflush(stdin);
   fgets(produto->codProd, MIN, stdin);
   produto->codProd[strlen(produto->codProd) - 1] = '\0';
-  
+
   printf("\n Nome produto: ");
   fflush(stdin);
   fgets(produto->nomeProd, MAX, stdin);
@@ -87,7 +87,6 @@ void ExibirProduto(Produto *produto)
   printf("\n Código produto: %s", produto->codProd);
   printf("\n Nome: %s", produto->nomeProd);
 
-
   if (produto->descricao == 1)
   {
     printf("\n-----------------");
@@ -100,7 +99,6 @@ void ExibirProduto(Produto *produto)
     printf("\n Descrição: ");
     ProdutoProDescricao();
   }
-
 
   if (produto->catProd == 1)
   {
@@ -127,7 +125,6 @@ void ExibirProduto(Produto *produto)
     ProdutoLiteCategoriaPizzaria();
   }
 
-
   if (produto->itensInc == 1)
   {
     printf("\n-----------------");
@@ -141,7 +138,6 @@ void ExibirProduto(Produto *produto)
     ItensInclusosPro();
   }
 
-
   if (produto->funcProd == 1)
   {
     printf("\n-----------------");
@@ -154,7 +150,6 @@ void ExibirProduto(Produto *produto)
     printf("\n Funcionalidades do produto: ");
     FuncionalidadePro();
   }
-
 
   if (produto->integProd == 1)
   {
@@ -304,36 +299,217 @@ void ListarProduto()
   BaseProduto();
   Produto produto;
   InicializarProduto(&produto);
-  int linha = 0;
+  int linha = 0, op;
   rewind(fp);
 
-  while (!feof(fp))
+  printf("\n\n 1 - RESTAURANTE  2 - DELIVERY  3 - HAMBURGUERIA  4 - PIZZARIA  5 - TODOS  0 - VOLTAR ");
+  printf("\n Selecione a opção a ser listada: ");
+  scanf("%i", &op);
+
+  if (op == 1)
   {
-    if (fread(&produto, sizeof(Produto), 1, fp) != 1)
+    while (!feof(fp))
     {
-      break;
+      if (fread(&produto, sizeof(Produto), 1, fp) != 1)
+      {
+        break;
+      }
+      if (produto.ativo == 0)
+      {
+        continue;
+      }
+      if (produto.tipo == 0)
+      {
+        continue;
+      }
+      if (produto.catProd == 2) {
+        continue;
+      }
+      if (produto.catProd == 3) {
+        continue;
+      }
+      if (produto.catProd == 4) {
+        continue;
+      }
+      ExibirProduto(&produto);
+      printf("\n");
+      printf("\n ++++++++++++++++++++++++++++ \n");
+      printf("\n");
+      linha++;
     }
-    if (produto.ativo == 0)
+
+    if (linha == 0)
     {
-      continue;
+      printf("\n Não contém registros. \n");
     }
-    if (produto.tipo == 0)
-    {
-      continue;
-    }
-    ExibirProduto(&produto);
-    printf("\n");
-    printf("\n ++++++++++++++++++++++++++++ \n");
-    printf("\n");
-    linha++;
+    printf("\n Pressione ENTER para voltar ao MENU.");
+    getche();
   }
 
-  if (linha == 0)
+  if (op == 2)
   {
-    printf("\n Não contém registros. \n");
+    while (!feof(fp))
+    {
+      if (fread(&produto, sizeof(Produto), 1, fp) != 1)
+      {
+        break;
+      }
+      if (produto.ativo == 0)
+      {
+        continue;
+      }
+      if (produto.tipo == 0)
+      {
+        continue;
+      }
+      if (produto.catProd == 1)
+      {
+        continue;
+      }
+      if (produto.catProd == 3)
+      {
+        continue;
+      }
+      if (produto.catProd == 4)
+      {
+        continue;
+      }
+      ExibirProduto(&produto);
+      printf("\n");
+      printf("\n ++++++++++++++++++++++++++++ \n");
+      printf("\n");
+      linha++;
+    }
+
+    if (linha == 0)
+    {
+      printf("\n Não contém registros. \n");
+    }
+    printf("\n Pressione ENTER para voltar ao MENU.");
+    getche();
   }
-  printf("\n Pressione ENTER para voltar ao MENU.");
-  getche();
+
+  if (op == 3)
+  {
+    while (!feof(fp))
+    {
+      if (fread(&produto, sizeof(Produto), 1, fp) != 1)
+      {
+        break;
+      }
+      if (produto.ativo == 0)
+      {
+        continue;
+      }
+      if (produto.tipo == 0)
+      {
+        continue;
+      }
+      if (produto.catProd == 1)
+      {
+        continue;
+      }
+      if (produto.catProd == 2)
+      {
+        continue;
+      }
+      if (produto.catProd == 4)
+      {
+        continue;
+      }
+      ExibirProduto(&produto);
+      printf("\n");
+      printf("\n ++++++++++++++++++++++++++++ \n");
+      printf("\n");
+      linha++;
+    }
+
+    if (linha == 0)
+    {
+      printf("\n Não contém registros. \n");
+    }
+    printf("\n Pressione ENTER para voltar ao MENU.");
+    getche();
+  }
+
+  if (op == 4)
+  {
+    while (!feof(fp))
+    {
+      if (fread(&produto, sizeof(Produto), 1, fp) != 1)
+      {
+        break;
+      }
+      if (produto.ativo == 0)
+      {
+        continue;
+      }
+      if (produto.tipo == 0)
+      {
+        continue;
+      }
+      if (produto.catProd == 1)
+      {
+        continue;
+      }
+      if (produto.catProd == 2)
+      {
+        continue;
+      }
+      if (produto.catProd == 3)
+      {
+        continue;
+      }
+      ExibirProduto(&produto);
+      printf("\n");
+      printf("\n ++++++++++++++++++++++++++++ \n");
+      printf("\n");
+      linha++;
+    }
+
+    if (linha == 0)
+    {
+      printf("\n Não contém registros. \n");
+    }
+    printf("\n Pressione ENTER para voltar ao MENU.");
+    getche();
+  }
+
+  if (op == 5)
+  {
+    while (!feof(fp))
+    {
+      if (fread(&produto, sizeof(Produto), 1, fp) != 1)
+      {
+        break;
+      }
+      if (produto.ativo == 0)
+      {
+        continue;
+      }
+      if (produto.tipo == 0)
+      {
+        continue;
+      }
+      ExibirProduto(&produto);
+      printf("\n");
+      printf("\n ++++++++++++++++++++++++++++ \n");
+      printf("\n");
+      linha++;
+    }
+
+    if (linha == 0)
+    {
+      printf("\n Não contém registros. \n");
+    }
+    printf("\n Pressione ENTER para voltar ao MENU.");
+    getche();
+  }
+
+  if (op == 0) {
+    printf("\n Pressione ENTER para voltar ao MENU.");
+    getche();
+  }
 }
 
 int PesquisarProduto()
