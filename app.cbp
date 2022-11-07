@@ -22,6 +22,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="src/cartao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/cartao.h" />
 		<Unit filename="src/cliente.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -58,6 +62,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/produtoMensagem.h" />
+		<Unit filename="src/selecao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/selecao.h" />
 		<Unit filename="src/submenu.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -66,6 +74,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/submenu_gerencia.h" />
+		<Unit filename="src/venda.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/venda.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -43,4 +43,6 @@ int PesquisarProduto();
 void ExcluirProduto();
 
 void AlterarProduto();
+
+Produto BuscarProduto(char *valor);
 #endif // PRODUTO_H

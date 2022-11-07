@@ -322,13 +322,16 @@ void ListarProduto()
       {
         continue;
       }
-      if (produto.catProd == 2) {
+      if (produto.catProd == 2)
+      {
         continue;
       }
-      if (produto.catProd == 3) {
+      if (produto.catProd == 3)
+      {
         continue;
       }
-      if (produto.catProd == 4) {
+      if (produto.catProd == 4)
+      {
         continue;
       }
       ExibirProduto(&produto);
@@ -506,7 +509,8 @@ void ListarProduto()
     getche();
   }
 
-  if (op == 0) {
+  if (op == 0)
+  {
     printf("\n Pressione ENTER para voltar ao MENU.");
     getche();
   }
@@ -719,6 +723,41 @@ void AlterarProduto()
       {
         printf("\n SAINDO \n");
         MenuProdutoGerencia();
+      }
+    }
+  }
+  fclose(fp);
+}
+
+Produto BuscarProduto(char *valor)
+{
+  BaseProduto();
+  Produto produto;
+  InicializarProduto(&produto);
+  int pos = 0, linha = 0, op;
+
+  rewind(fp);
+
+  while (!feof(fp))
+  {
+    if (strlen(valor) < 1)
+    {
+      printf("Nome Inválido! \n\n");
+    }
+    else
+    {
+      while (fread(&produto, sizeof(Produto), 1, fp))
+      {
+        if (produto.ativo != 0 && strstr(produto.codProd, valor))
+        {
+          pos = 1;
+          return produto;
+        }
+        linha++;
+      }
+      if (pos == 0)
+      {
+        printf("Registro não encontrado.");
       }
     }
   }
