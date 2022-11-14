@@ -1,6 +1,6 @@
 #include "menu.h"
 
-void MenuGerencia()
+void MenuGerencia(Funcionario *funcionario)
 {
 
     int op;
@@ -52,7 +52,7 @@ void MenuGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                          COMET TECH - VENDAS   \n");
             printf("\n ////////////////////////////////////////////////////////////////////\n");
-            MenuVendaGerencia();
+            MenuVendaGerencia(&funcionario);
             break;
         }
     } while (op != 0);

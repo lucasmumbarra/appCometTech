@@ -38,10 +38,11 @@
 1667694087 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.c
 	"menu.h"
 
-1666932964 c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.h
+1668357845 c:\users\lucas\onedrive\desktop\projectsunip\app\src\menu.h
 	"libs.h"
 	"submenu_gerencia.h"
 	"submenu.h"
+	"funcionario.h"
 
 1667055267 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu.h
 	"libs.h"
@@ -60,13 +61,14 @@
 1667182796 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\funcionario_login.c
 	"funcionario_login.h"
 
-1667694087 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
+1668358153 c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.h
 	"libs.h"
 	"menu.h"
 	"funcionario_login.h"
 	"funcionario.h"
 	"cliente.h"
 	"produto.h"
+	"venda.h"
 	"erros.h"
 
 1667694087 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\submenu_gerencia.c
@@ -85,14 +87,14 @@
 1667360953 c:\users\lucas\onedrive\desktop\projectsunip\app\src\cliente.h
 	"libs.h"
 
-1667780112 c:\users\lucas\onedrive\desktop\projectsunip\app\src\produto.h
+1667793909 c:\users\lucas\onedrive\desktop\projectsunip\app\src\produto.h
 	"libs.h"
 	"produtoMensagem.h"
 
 1667700811 c:\users\lucas\onedrive\desktop\projectsunip\app\src\produtomensagem.h
 	"libs.h"
 
-1667768476 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\produto.c
+1667793909 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\produto.c
 	"produto.h"
 
 1667700811 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\produtomensagem.c
@@ -180,4 +182,28 @@
 
 1667494046 source:c:\users\lucasmumbarra\desktop\pim\appcomettech\src\submenu_gerencia.c
 	"submenu_gerencia.h"
+
+1668355385 c:\users\lucas\onedrive\desktop\projectsunip\app\src\venda.h
+	"libs.h"
+	"cliente.h"
+	"selecao.h"
+	"cartao.h"
+
+1667793909 c:\users\lucas\onedrive\desktop\projectsunip\app\src\selecao.h
+	"libs.h"
+	"cliente.h"
+	"produto.h"
+
+1667793909 c:\users\lucas\onedrive\desktop\projectsunip\app\src\cartao.h
+	"libs.h"
+	"venda.h"
+
+1667793909 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\cartao.c
+	"cartao.h"
+
+1667793909 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\selecao.c
+	"selecao.h"
+
+1668355363 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\venda.c
+	"venda.h"
 

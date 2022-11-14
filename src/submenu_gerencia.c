@@ -251,7 +251,7 @@ void MenuProdutoGerencia()
     } while (op != 0);
 }
 
-void MenuVendaGerencia()
+void MenuVendaGerencia(Funcionario *funcionario)
 {
     int op;
 
@@ -283,7 +283,24 @@ void MenuVendaGerencia()
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - CADASTRAR VENDA\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            BaseSelecao(funcionario->cod);
+            CadastrarSelecao();
+            printf("\n Deseja continuar a compra: 1 - Sim   2 - Não: \n Selecione a opção: ");
+            scanf("%i", &op);
+            if (op == 1)
+            {
+                continue;
+            }
+            else if (op == 2)
+            {
+                ExibirVenda(funcionario->nome, funcionario->cod);
+                break;
+            }
+            else
+            {
+                printf("\n\n Opção inválida! \n");
+                Sleep(1);
+            }
             break;
         case 2:
             system("cls");

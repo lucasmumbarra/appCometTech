@@ -26,4 +26,18 @@ void BaseVenda();
 
 void InicializarVenda(Venda *venda);
 
+void ExibirVenda(char nome[MAX], char cod[MAX]);
+
+void CarregarVenda(char *cod, char *nome);
+
+void CarregarSelecao(char *cod, Venda *venda);
+
+void ExibirProdVenda(Venda *venda);
+
+void ExibirListaVenda(Venda *venda);
+
+void ListarVenda();
+
+void AlterarVenda(char *cod);
+
 #endif // VENDAS_H

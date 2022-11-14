@@ -4,6 +4,7 @@
 #include "libs.h"
 #include "submenu_gerencia.h"
 #include "submenu.h"
+#include "funcionario.h"
 
-void MenuGerencia();
+void MenuGerencia(Funcionario *funcionario);
 #endif // MENU_H
