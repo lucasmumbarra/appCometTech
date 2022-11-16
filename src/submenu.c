@@ -1,8 +1,10 @@
 #include "submenu.h"
 
-void MenuCliente(Funcionario *funcioanrio)
+void MenuCliente()
 {
   int op;
+
+  Funcionario funcionario;
 
   do
   {
@@ -64,15 +66,17 @@ void MenuCliente(Funcionario *funcioanrio)
       break;
     case 0:
       system("cls");
-      MenuGerencia(funcionario);
+      MenuGerencia(&funcionario);
       break;
     }
   } while (op != 0);
 }
 
-void MenuProduto(Funcionario *funcioanrio)
+void MenuProduto()
 {
   int op;
+
+  Funcionario funcionario;
 
   do
   {
@@ -134,15 +138,17 @@ void MenuProduto(Funcionario *funcioanrio)
       break;
     case 0:
       system("cls");
-      MenuGerencia(funcionario);
+      MenuGerencia(&funcionario);
       break;
     }
   } while (op != 0);
 }
 
-void MenuVenda(Funcionario *funcioanrio)
+void MenuVenda()
 {
   int op;
+
+  Funcionario funcionario;
 
   do
   {
@@ -204,7 +210,7 @@ void MenuVenda(Funcionario *funcioanrio)
       break;
     case 0:
       system("cls");
-      MenuGerencia(funcionario);
+      MenuGerencia(&funcionario);
       break;
     }
   } while (op != 0);

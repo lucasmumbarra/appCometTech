@@ -491,6 +491,41 @@ void AlterarCliente()
   fclose(fp);
 }
 
+Cliente BuscarCliente(char *valor)
+{
+  BaseCliente();
+  Cliente cliente;
+  InicializarCliente(&cliente);
+  int pos = 0, linha = 0, op;
+
+  rewind(fp);
+
+  while (!feof(fp))
+  {
+    if (strlen(valor) < 1)
+    {
+      printf("CNPJ Inválido! \n\n");
+    }
+    else
+    {
+      while (fread(&cliente, sizeof(Cliente), 1, fp))
+      {
+        if (cliente.ativo != 0 && strstr(cliente.cnpj, valor))
+        {
+          pos = 1;
+          return cliente;
+        }
+        linha++;
+      }
+      if (pos == 0)
+      {
+        printf("Registro não encontrado.");
+      }
+    }
+  }
+  fclose(fp);
+}
+
 int CarregarCodigoCliente()
 {
   BaseCliente();

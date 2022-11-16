@@ -16,7 +16,8 @@ void BaseSelecao(char cod[])
 
 void InicializarSelecao(Selecao *selecao)
 {
-  strstr(selecao->valor, "");
+  strstr(selecao->valorProd, "");
+  strstr(selecao->valorCliente, "");
   selecao->quantidade = 0;
 }
 
@@ -24,10 +25,17 @@ void LerSelecao(Selecao *selecao)
 {
   printf("\n Digite o código do produto: ");
   fflush(stdin);
-  fgets(selecao->valor, MAX, stdin);
-  selecao->valor[strlen(selecao->valor) - 1] = '\0';
+  fgets(selecao->valorProd, MAX, stdin);
+  selecao->valorProd[strlen(selecao->valorProd) - 1] = '\0';
 
-  selecao->produto = BuscarProduto(selecao->valor);
+  selecao->produto = BuscarProduto(selecao->valorProd);
+
+  printf("\n Digite o CNPJ do cliente: ");
+  fflush(stdin);
+  fgets(selecao->valorCliente, MAX, stdin);
+  selecao->valorCliente[strlen(selecao->valorCliente) - 1] = '\0';
+
+  selecao->cliente = BuscarCliente(selecao->valorCliente);
 
   while (1)
   {
@@ -47,8 +55,9 @@ void LerSelecao(Selecao *selecao)
 
 void ExibirSelecao(Selecao *selecao)
 {
-  printf("\n Código: %s", selecao->valor);
+  printf("\n Código: %s", selecao->valorProd);
   printf("\n Nome: %s", selecao->produto.nomeProd);
+  printf("\n Razão social: %s", selecao->cliente.razaoSocial);
 
   if (selecao->produto.descricao == 1)
   {

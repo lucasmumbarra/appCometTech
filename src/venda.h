@@ -15,7 +15,6 @@ FILE *ven;
 typedef struct
 {
   char cod[MAX];
-  Cliente cliente[MAX];
   Selecao selecao[MAX];
   int pagamento;
   float total;
@@ -26,9 +25,9 @@ void BaseVenda();
 
 void InicializarVenda(Venda *venda);
 
-void ExibirVenda(char nome[MAX], char cod[MAX]);
+void ExibirVenda(char cod[MAX]);
 
-void CarregarVenda(char *cod, char *nome);
+void CarregarVenda(char *cod);
 
 void CarregarSelecao(char *cod, Venda *venda);
 

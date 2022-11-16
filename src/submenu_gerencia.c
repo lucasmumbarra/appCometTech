@@ -24,7 +24,7 @@ void MenuFuncionarioGerencia()
         printf(" 8  - ALTERAR FUNCIONARIO \n");
         printf(" 9  - EXCLUIR LOGIN \n");
         printf(" 10 - EXCLUIR FUNCIONARIO \n");
-        printf(" 0  - VOLTAR");
+        printf(" 0  - VOLTAR\n");
 
         printf("\n Escolha uma das opções acima: ");
         scanf("%d", &op);
@@ -132,7 +132,7 @@ void MenuClienteGerencia()
         printf(" 3 - LISTAR CLIENTE \n");
         printf(" 4 - ALTERAR CLIENTE \n");
         printf(" 5 - EXCLUIR CLIENTE \n");
-        printf(" 0  - VOLTAR");
+        printf(" 0  - VOLTAR\n");
 
         printf("\n Escolha uma das opções acima: ");
         scanf("%d", &op);
@@ -201,7 +201,7 @@ void MenuProdutoGerencia()
         printf(" 3 - LISTAR PRODUTO \n");
         printf(" 4 - ALTERAR PRODUTO \n");
         printf(" 5 - EXCLUIR PRODUTO \n");
-        printf(" 0 - VOLTAR");
+        printf(" 0 - VOLTAR\n");
 
         printf("\n Escolha uma das opções acima: ");
         scanf("%d", &op);
@@ -270,7 +270,7 @@ void MenuVendaGerencia(Funcionario *funcionario)
         printf(" 3 - LISTAR VENDA \n");
         printf(" 4 - ALTERAR VENDA \n");
         printf(" 5 - EXCLUIR VENDA \n");
-        printf(" 0 - VOLTAR");
+        printf(" 0 - VOLTAR\n");
 
         printf("\n Escolha uma das opções acima: ");
         scanf("%d", &op);
@@ -288,12 +288,13 @@ void MenuVendaGerencia(Funcionario *funcionario)
             printf("\n Deseja continuar a compra: 1 - Sim   2 - Não: \n Selecione a opção: ");
             scanf("%i", &op);
             if (op == 1)
-            {
-                continue;
+            {    
+                ExibirVenda(funcionario->cod);
+                break;
             }
             else if (op == 2)
             {
-                ExibirVenda(funcionario->nome, funcionario->cod);
+                printf("Pressione ENTER para voltar ao menu.");
                 break;
             }
             else
@@ -314,7 +315,7 @@ void MenuVendaGerencia(Funcionario *funcionario)
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - LISTAR VENDA\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            ListarVenda();
             break;
         case 4:
             system("cls");

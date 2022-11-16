@@ -18,11 +18,11 @@ void InicializarVenda(Venda *venda)
 {
   int i;
   strstr(venda->cod, "");
-  strstr(venda->cliente->razaoSocial, "");
   for (i = 0; i < MAX; i++)
   {
     strstr(venda->selecao->produto.codProd, "");
     strstr(venda->selecao->produto.nomeProd, "");
+    strstr(venda->selecao->cliente.razaoSocial, "");
     venda->selecao->produto.descricao = 0;
     venda->selecao->produto.catProd = 0;
     strstr(venda->selecao->produto.valorProd, "");
@@ -32,7 +32,7 @@ void InicializarVenda(Venda *venda)
   venda->tamanho = 0;
 }
 
-void ExibirVenda(char nome[MAX], char cod[MAX])
+void ExibirVenda(char cod[MAX])
 {
   system("cls");
   printf(" /////////////////////////////////////////////////////////////////////\n");
@@ -41,18 +41,23 @@ void ExibirVenda(char nome[MAX], char cod[MAX])
   printf("\n");
   printf(" /////////////////////////////////////////////////////////////////////\n");
   printf("\n\n +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n");
+  CarregarVenda(cod);
 }
 
-void CarregarVenda(char *cod, char *nome)
+void CarregarVenda(char *cod)
 {
-  int op;
+  int op, ano = 12;
+  float total;
 
   Venda venda;
 
   sprintf(venda.cod, "%i", CarregarCodigo());
   CarregarSelecao(cod, &venda);
   ExibirProdVenda(&venda);
-  printf("\n\n Valor Total: %.2f", venda.total);
+
+  total = venda.total * ano;
+
+  printf("\n\n Valor Total: R$ %.2f por ano", total);
   printf("\n\n Deseja finalizar a compra: 1 - Sim  2 - Cancelar: ");
   scanf("%i", &op);
 
@@ -72,13 +77,9 @@ void CarregarVenda(char *cod, char *nome)
     {
       fclose(ven);
       remove(cod);
-      Sleep(1);
+      Sleep(1000);
       ExibirCartao(venda.cod);
     }
-  }
-  else
-  {
-    remove(cod);
   }
 }
 
@@ -103,6 +104,7 @@ void CarregarSelecao(char *cod, Venda *venda)
     }
     strcpy(venda->selecao[i].produto.codProd, selecao.produto.codProd);
     strcpy(venda->selecao[i].produto.nomeProd, selecao.produto.nomeProd);
+    strcpy(venda->selecao[i].cliente.razaoSocial, selecao.cliente.razaoSocial);
     venda->selecao[i].produto.descricao = selecao.produto.descricao;
     venda->selecao[i].produto.catProd = selecao.produto.catProd;
     strcpy(venda->selecao[i].produto.valorProd, selecao.produto.valorProd);
@@ -128,6 +130,7 @@ void ExibirProdVenda(Venda *venda)
   {
     printf("\n\n Código: %s", venda->selecao[i].produto.codProd);
     printf("\n Nome: %s", venda->selecao[i].produto.nomeProd);
+    printf("\n Razão social: %s", venda->selecao[i].cliente.razaoSocial);
 
     if (venda->selecao[i].produto.descricao == 1)
     {
@@ -174,15 +177,16 @@ void ExibirProdVenda(Venda *venda)
 
 void ExibirListaVenda(Venda *venda)
 {
-  int i;
+  int i, ano = 12;
+  float total;
 
   printf("\n Código venda: %s", venda->cod);
-  printf("\n\n Cliente: %s", venda->cliente->razaoSocial);
 
   for (i = 0; i < venda->tamanho; i++)
   {
     printf("\n\n Código: %s", venda->selecao[i].produto.codProd);
     printf("\n Nome: %s", venda->selecao[i].produto.nomeProd);
+    printf("\n Razão social: %s", venda->selecao[i].cliente.razaoSocial);
 
     if (venda->selecao[i].produto.descricao == 1)
     {
@@ -222,10 +226,13 @@ void ExibirListaVenda(Venda *venda)
       ProdutoLiteCategoriaPizzaria();
     }
 
-    printf("\n Valor: %s", venda->selecao[i].produto.valorProd);
+    printf("\n Valor: R$ %s por mês", venda->selecao[i].produto.valorProd);
     printf("\n Quantidade: %i", venda->selecao[i].quantidade);
   }
-  printf("\n\n Valor total: %.2f", venda->total);
+
+  total = venda->total * ano;
+
+  printf("\n\n Valor total: R$ %.2f por ano", total);
 
   if (venda->pagamento == 0)
   {
@@ -267,39 +274,6 @@ void ListarVenda()
   getche();
 }
 
-void AlterarVenda(char *cod)
-{
-  BaseVenda();
-  Venda venda;
-  InicializarVenda(&venda);
-
-  int pos = 0, op;
-
-  pos = PesquisarVenda(cod);
-
-  fseek(ven, pos * sizeof(Venda), SEEK_SET);
-
-  if (fread(&venda, sizeof(Venda), 1, ven) == 1) {
-    while(1) {
-      venda.pagamento = 1;
-
-      fseek(ven, pos * sizeof(Venda), SEEK_SET);
-
-      if (fwrite(&venda, sizeof(Venda), 1, ven) != 1) {
-        printf("\n Falha ao concluir pagamento!\n");
-        printf("\n\n Pressione ENTER para continuar.");
-        getche();
-        break;
-      } else {
-        printf("\n\n Pagamento realizado com sucesso!\n");
-        Sleep(2);
-        break;
-      }
-    }
-  }
-  fclose(ven);
-}
-
 int PesquisarVenda(char *cod)
 {
   BaseVenda();
@@ -326,6 +300,39 @@ int PesquisarVenda(char *cod)
       printf("Registro não encontrado");
     }
     break;
+  }
+  fclose(ven);
+}
+
+void AlterarVenda(char *cod)
+{
+  BaseVenda();
+  Venda venda;
+  InicializarVenda(&venda);
+
+  int pos = 0, op;
+
+  pos = PesquisarVenda(cod);
+
+  fseek(ven, pos * sizeof(Venda), SEEK_SET);
+
+  if (fread(&venda, sizeof(Venda), 1, ven) == 1) {
+    while(1) {
+      venda.pagamento = 1;
+
+      fseek(ven, pos * sizeof(Venda), SEEK_SET);
+
+      if (fwrite(&venda, sizeof(Venda), 1, ven) != 1) {
+        printf("\n Falha ao concluir pagamento!\n");
+        printf("\n\n Pressione ENTER para continuar.");
+        getche();
+        break;
+      } else {
+        printf("\n\n Pagamento realizado com sucesso!\n");
+        Sleep(2000);
+        break;
+      }
+    }
   }
   fclose(ven);
 }

@@ -10,8 +10,10 @@
 FILE *sel;
 
 typedef struct {
-  char valor[MAX];
+  char valorProd[MAX];
+  char valorCliente[MAX];
   int quantidade;
+  Cliente cliente;
   Produto produto;
 } Selecao;
 

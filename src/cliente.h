@@ -43,4 +43,7 @@ int PesquisarCliente();
 void ExcluirCliente();
 
 void AlterarCliente();
+
+Cliente BuscarCliente(char *valor);
+
 #endif // CLIENTE_H

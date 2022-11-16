@@ -207,3 +207,112 @@
 1668355363 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\venda.c
 	"venda.h"
 
+1668545471 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\cartao.c
+	"cartao.h"
+
+1668482085 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\cartao.h
+	"libs.h"
+	"venda.h"
+
+1668481955 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\libs.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<windows.h>
+
+1668558537 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.h
+	"libs.h"
+	"cliente.h"
+	"selecao.h"
+	"cartao.h"
+
+1668558886 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\cliente.h
+	"libs.h"
+
+1668558612 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\selecao.h
+	"libs.h"
+	"cliente.h"
+	"produto.h"
+
+1668482085 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\produto.h
+	"libs.h"
+	"produtoMensagem.h"
+
+1668482085 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\produtomensagem.h
+	"libs.h"
+
+1668559598 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\cliente.c
+	"cliente.h"
+
+1668481955 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\comettech.c
+	"libs.h"
+
+1668481955 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\erros.c
+	"erros.h"
+
+1668481955 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\erros.h
+	"libs.h"
+	"submenu_gerencia.h"
+
+1668482089 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu_gerencia.h
+	"libs.h"
+	"menu.h"
+	"funcionario_login.h"
+	"funcionario.h"
+	"cliente.h"
+	"produto.h"
+	"venda.h"
+	"erros.h"
+
+1668482089 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\menu.h
+	"libs.h"
+	"submenu_gerencia.h"
+	"submenu.h"
+	"funcionario.h"
+
+1668521157 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu.h
+	"libs.h"
+	"menu.h"
+
+1668481955 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\funcionario.h
+	"libs.h"
+
+1668481955 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\funcionario_login.h
+	"libs.h"
+	"submenu_gerencia.h"
+
+1668481955 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\funcionario.c
+	"funcionario.h"
+
+1668481955 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\funcionario_login.c
+	"funcionario_login.h"
+
+1668481955 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\login.c
+	"login.h"
+
+1668481955 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\login.h
+	"libs.h"
+	"funcionario_login.h"
+
+1668482089 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\menu.c
+	"menu.h"
+
+1668482085 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\produto.c
+	"produto.h"
+
+1668482085 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\produtomensagem.c
+	"produtoMensagem.h"
+
+1668559611 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\selecao.c
+	"selecao.h"
+
+1668521451 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu.c
+	"submenu.h"
+
+1668562690 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu_gerencia.c
+	"submenu_gerencia.h"
+
+1668560084 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.c
+	"venda.h"
+

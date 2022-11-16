@@ -3,34 +3,42 @@
 void ExibirCartao(char *cod)
 {
   char numero[16], codigo[3];
+  int numLen, codLen;
 
   while (1)
   {
     system("cls");
     printf("////////////////////////////////////////////////////\n");
-    printf("\n                   PAGAMENTO");
+    printf("\n               PAGAMENTO\n");
     printf("\n////////////////////////////////////////////////////\n");
 
     printf("\n\n Digite o número do cartão: ");
     fflush(stdin);
     gets(numero);
+    numLen = strlen(numero);
 
-    printf("\n\n Digite o código de segurança do cartão: ");
+    printf("\n\n Digite o código de seguraça do cartão: ");
     fflush(stdin);
     gets(codigo);
+    codLen = strlen(codigo);
 
-    if(strlen(numero) < 16) {
-      printf(" \n Número do cartão inválido!");
-      printf("\n\n Pressione ENTER para continuar.");
+    if (numLen < 16)
+    {
+      printf(" \n Número do cartão Inválido! ");
+      printf("\n\n Pressione Enter para continuar.");
       getche();
-    } else if (strlen(codigo) < 3) {
-      printf(" \n Código de segurança inválido!");
-      printf("\n\n Pressione ENTER para continuar.");
+    }
+    else if (codLen < 3)
+    {
+      printf(" \n Código de segurança Inválido! ");
+      printf("\n\n Pressione Enter para continuar.");
       getche();
-    } else {
+    }
+    else
+    {
       printf("\n\n Verificando Pagamento...");
-      Sleep(3);
-      // AlterarVenda(cod);
+      Sleep(3000);
+      AlterarVenda(cod);
       break;
     }
   }
