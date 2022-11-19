@@ -266,10 +266,7 @@ void MenuVendaGerencia(Funcionario *funcionario)
 
         printf("\n\n ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n");
         printf(" 1 - CADASTRAR VENDA\n");
-        printf(" 2 - PESQUISAR VENDA\n");
         printf(" 3 - LISTAR VENDA \n");
-        printf(" 4 - ALTERAR VENDA \n");
-        printf(" 5 - EXCLUIR VENDA \n");
         printf(" 0 - VOLTAR\n");
 
         printf("\n Escolha uma das opções acima: ");

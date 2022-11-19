@@ -105,6 +105,8 @@ void CarregarSelecao(char *cod, Venda *venda)
     strcpy(venda->selecao[i].produto.codProd, selecao.produto.codProd);
     strcpy(venda->selecao[i].produto.nomeProd, selecao.produto.nomeProd);
     strcpy(venda->selecao[i].cliente.razaoSocial, selecao.cliente.razaoSocial);
+    strcpy(venda->selecao[i].dataVenda, selecao.dataVenda);
+    strcpy(venda->selecao[i].dataVencimento, selecao.dataVencimento);
     venda->selecao[i].produto.descricao = selecao.produto.descricao;
     venda->selecao[i].produto.catProd = selecao.produto.catProd;
     strcpy(venda->selecao[i].produto.valorProd, selecao.produto.valorProd);
@@ -131,6 +133,8 @@ void ExibirProdVenda(Venda *venda)
     printf("\n\n Código: %s", venda->selecao[i].produto.codProd);
     printf("\n Nome: %s", venda->selecao[i].produto.nomeProd);
     printf("\n Razão social: %s", venda->selecao[i].cliente.razaoSocial);
+    printf("\n Data de venda: %s", venda->selecao[i].dataVenda);
+    printf("\n Data de vencimento: %s", venda->selecao[i].dataVencimento);
 
     if (venda->selecao[i].produto.descricao == 1)
     {
@@ -187,6 +191,8 @@ void ExibirListaVenda(Venda *venda)
     printf("\n\n Código: %s", venda->selecao[i].produto.codProd);
     printf("\n Nome: %s", venda->selecao[i].produto.nomeProd);
     printf("\n Razão social: %s", venda->selecao[i].cliente.razaoSocial);
+    printf("\n Data de venda: %s", venda->selecao[i].dataVenda);
+    printf("\n Data de vencimento: %s", venda->selecao[i].dataVencimento);
 
     if (venda->selecao[i].produto.descricao == 1)
     {

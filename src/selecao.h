@@ -12,6 +12,8 @@ FILE *sel;
 typedef struct {
   char valorProd[MAX];
   char valorCliente[MAX];
+  char dataVenda[MAX];
+  char dataVencimento[MAX];
   int quantidade;
   Cliente cliente;
   Produto produto;

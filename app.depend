@@ -221,7 +221,7 @@
 	<locale.h>
 	<windows.h>
 
-1668558537 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.h
+1668823091 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.h
 	"libs.h"
 	"cliente.h"
 	"selecao.h"
@@ -230,7 +230,7 @@
 1668558886 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\cliente.h
 	"libs.h"
 
-1668558612 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\selecao.h
+1668823710 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\selecao.h
 	"libs.h"
 	"cliente.h"
 	"produto.h"
@@ -310,7 +310,7 @@
 1668521451 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu.c
 	"submenu.h"
 
-1668562690 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu_gerencia.c
+1668822949 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu_gerencia.c
 	"submenu_gerencia.h"
 
 1668560084 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.c

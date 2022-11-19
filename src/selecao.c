@@ -18,6 +18,8 @@ void InicializarSelecao(Selecao *selecao)
 {
   strstr(selecao->valorProd, "");
   strstr(selecao->valorCliente, "");
+  strstr(selecao->dataVenda, "");
+  strstr(selecao->dataVencimento, "");
   selecao->quantidade = 0;
 }
 
@@ -36,6 +38,16 @@ void LerSelecao(Selecao *selecao)
   selecao->valorCliente[strlen(selecao->valorCliente) - 1] = '\0';
 
   selecao->cliente = BuscarCliente(selecao->valorCliente);
+
+  printf("\n Digite a data de venda: ");
+  fflush(stdin);
+  fgets(selecao->dataVenda, MAX, stdin);
+  selecao->dataVenda[strlen(selecao->dataVenda) - 1] = '\0';
+
+  printf("\n Digite a data de vencimento: ");
+  fflush(stdin);
+  fgets(selecao->dataVencimento, MAX, stdin);
+  selecao->dataVencimento[strlen(selecao->dataVencimento) - 1] = '\0';
 
   while (1)
   {
@@ -58,6 +70,8 @@ void ExibirSelecao(Selecao *selecao)
   printf("\n Código: %s", selecao->valorProd);
   printf("\n Nome: %s", selecao->produto.nomeProd);
   printf("\n Razão social: %s", selecao->cliente.razaoSocial);
+  printf("\n Data da venda: %s", selecao->dataVenda);
+  printf("\n Data de vencimento: %s", selecao->dataVencimento);
 
   if (selecao->produto.descricao == 1)
   {
