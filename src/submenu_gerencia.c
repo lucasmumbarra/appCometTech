@@ -253,7 +253,9 @@ void MenuProdutoGerencia()
 
 void MenuVendaGerencia(Funcionario *funcionario)
 {
-    int op;
+    int op, val;
+
+    char cod[30];
 
     do
     {
@@ -266,7 +268,9 @@ void MenuVendaGerencia(Funcionario *funcionario)
 
         printf("\n\n ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n");
         printf(" 1 - CADASTRAR VENDA\n");
+        printf(" 2 - PESQUISAR VENDA\n");
         printf(" 3 - LISTAR VENDA \n");
+        printf(" 4 - EXCLUIR VENDA \n");
         printf(" 0 - VOLTAR\n");
 
         printf("\n Escolha uma das opções acima: ");
@@ -285,7 +289,7 @@ void MenuVendaGerencia(Funcionario *funcionario)
             printf("\n Deseja continuar a compra: 1 - Sim   2 - Não: \n Selecione a opção: ");
             scanf("%i", &op);
             if (op == 1)
-            {    
+            {
                 ExibirVenda(funcionario->cod);
                 break;
             }
@@ -305,7 +309,7 @@ void MenuVendaGerencia(Funcionario *funcionario)
             printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                  COMET TECH - PESQUISAR VENDA\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
+            PesquisarVendaLt();
             break;
         case 3:
             system("cls");
@@ -317,17 +321,26 @@ void MenuVendaGerencia(Funcionario *funcionario)
         case 4:
             system("cls");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            printf("\n                 COMET TECH - ALTERAR VENDA\n");
-            printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
-            break;
-        case 5:
-            system("cls");
-            printf(" //////////////////////////////////////////////////////////////////////\n");
             printf("\n                 COMET TECH - EXCLUIR VENDA\n");
             printf(" //////////////////////////////////////////////////////////////////////\n");
-            system("pause");
-            break;
+            printf("\n Dígite o código da venda a ser excluída: ");
+            scanf("%s", &cod);
+            printf("\n Deseja realmente excluir a venda?\n 1 - SIM  2 - NÃO \n Selecione uma opção: ");
+            scanf("%i", &op);
+
+            if (op == 1)
+            {
+                val = 2;
+                AlterarVenda(cod, val);
+                break;
+            }
+
+            if (op == 2)
+            {
+                printf("Pressíone ENTER para continuar");
+                getche();
+                break;
+            }
         case 0:
             system("cls");
             break;

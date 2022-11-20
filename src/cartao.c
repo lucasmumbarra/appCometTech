@@ -3,7 +3,7 @@
 void ExibirCartao(char *cod)
 {
   char numero[16], codigo[3];
-  int numLen, codLen;
+  int numLen, codLen, val;
 
   while (1)
   {
@@ -36,9 +36,12 @@ void ExibirCartao(char *cod)
     }
     else
     {
+
+      val = 1;
+
       printf("\n\n Verificando Pagamento...");
       Sleep(3000);
-      AlterarVenda(cod);
+      AlterarVenda(cod, val);
       break;
     }
   }

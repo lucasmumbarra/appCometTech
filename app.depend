@@ -207,7 +207,7 @@
 1668355363 source:c:\users\lucas\onedrive\desktop\projectsunip\app\src\venda.c
 	"venda.h"
 
-1668545471 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\cartao.c
+1668878855 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\cartao.c
 	"cartao.h"
 
 1668482085 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\cartao.h
@@ -221,7 +221,7 @@
 	<locale.h>
 	<windows.h>
 
-1668823091 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.h
+1668914326 c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.h
 	"libs.h"
 	"cliente.h"
 	"selecao.h"
@@ -298,21 +298,21 @@
 1668482089 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\menu.c
 	"menu.h"
 
-1668482085 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\produto.c
+1668908675 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\produto.c
 	"produto.h"
 
 1668482085 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\produtomensagem.c
 	"produtoMensagem.h"
 
-1668559611 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\selecao.c
+1668823748 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\selecao.c
 	"selecao.h"
 
 1668521451 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu.c
 	"submenu.h"
 
-1668822949 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu_gerencia.c
+1668913933 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\submenu_gerencia.c
 	"submenu_gerencia.h"
 
-1668560084 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.c
+1668912554 source:c:\users\lucas\onedrive\desktop\projectsunip\appcomettech\src\venda.c
 	"venda.h"
 

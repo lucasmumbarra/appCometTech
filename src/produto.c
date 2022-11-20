@@ -531,7 +531,7 @@ int PesquisarProduto()
 
   while (!feof(fp))
   {
-    printf("Digite a nome do produto ou o código do produto a ser procurado: ");
+    printf("Digite o nome do produto ou o código do produto a ser procurado: ");
     fflush(stdin);
     fgets(valor, MAX, stdin);
     valor[strlen(valor) - 1] = '\0';

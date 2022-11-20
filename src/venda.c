@@ -30,6 +30,7 @@ void InicializarVenda(Venda *venda)
   venda->pagamento = 0;
   venda->total = 0;
   venda->tamanho = 0;
+  venda->ativo = 0;
 }
 
 void ExibirVenda(char cod[MAX])
@@ -266,6 +267,10 @@ void ListarVenda()
     {
       break;
     }
+    if (venda.ativo == 0)
+    {
+      continue;
+    }
     ExibirListaVenda(&venda);
     printf("\n +++++++++++++++++++++++++++++ \n");
     linha++;
@@ -310,7 +315,58 @@ int PesquisarVenda(char *cod)
   fclose(ven);
 }
 
-void AlterarVenda(char *cod)
+int PesquisarVendaLt()
+{
+  BaseVenda();
+  Venda venda;
+  InicializarVenda(&venda);
+
+  char valor[MAX];
+  strcpy(valor, "");
+
+  int pos = 0, linha = 0, op;
+
+  rewind(ven);
+
+  while (!feof(ven))
+  {
+    printf("Digite o código da venda a ser procurada: ");
+    fflush(stdin);
+    fgets(valor, MAX, stdin);
+    valor[strlen(valor) - 1] = '\0';
+
+    if (strlen(valor) < 1)
+    {
+      printf("Código Inválida! \n\n");
+    }
+    else
+    {
+      while (fread(&venda, sizeof(Venda), 1, ven))
+      {
+        if (venda.ativo != 0 && strstr(venda.cod, valor))
+        {
+          ExibirProdVenda(&venda);
+          pos = 1;
+          printf("\n\n Pressione ENTER para continuar.");
+          getche();
+          return linha;
+        }
+        linha++;
+      }
+      if (pos == 0)
+      {
+        printf("Registro não encontrado.");
+      }
+      printf("\n\n Pressione ENTER para continuar.");
+      getche();
+
+      break;
+    }
+  }
+  fclose(ven);
+}
+
+void AlterarVenda(char *cod, int *val)
 {
   BaseVenda();
   Venda venda;
@@ -322,21 +378,66 @@ void AlterarVenda(char *cod)
 
   fseek(ven, pos * sizeof(Venda), SEEK_SET);
 
-  if (fread(&venda, sizeof(Venda), 1, ven) == 1) {
-    while(1) {
-      venda.pagamento = 1;
+  if (fread(&venda, sizeof(Venda), 1, ven) == 1)
+  {
+    while (1)
+    {
+
+      if (val == 1)
+      {
+        venda.pagamento = 1;
+        venda.ativo = 1;
+      }
+
+      if (val == 2)
+      {
+        venda.pagamento = 1;
+        venda.ativo = 0;
+      }
 
       fseek(ven, pos * sizeof(Venda), SEEK_SET);
 
-      if (fwrite(&venda, sizeof(Venda), 1, ven) != 1) {
-        printf("\n Falha ao concluir pagamento!\n");
-        printf("\n\n Pressione ENTER para continuar.");
-        getche();
-        break;
-      } else {
-        printf("\n\n Pagamento realizado com sucesso!\n");
-        Sleep(2000);
-        break;
+      if (fwrite(&venda, sizeof(Venda), 1, ven) != 1)
+      {
+        if (val == 1)
+        {
+          printf("\n Falha ao concluir pagamento!\n");
+          printf("\n\n Pressione ENTER para continuar.");
+          getche();
+          break;
+        }
+
+        if (val == 2)
+        {
+          printf("\n Falha ao excluir o registro!\n");
+          printf("\n\n Pressione ENTER para continuar.");
+          getche();
+          break;
+        }
+      }
+      else
+      {
+        if (val == 1)
+        {
+          system("cls");
+          printf(" /////////////////////////////////////////////////////////////////////\n");
+          printf("\n");
+          printf("                         VENDA FINALIZADA  \n");
+          printf("\n");
+          printf(" /////////////////////////////////////////////////////////////////////\n");
+          printf("\n\n +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n");
+          printf("\n\n Pagamento realizado com sucesso!\n");
+          Sleep(2000);
+          break;
+        }
+
+        if (val == 2)
+        {
+          printf("\n Registro excluído com sucesso!\n");
+          printf("\n\n Pressione ENTER para continuar.");
+          getche();
+          break;
+        }
       }
     }
   }

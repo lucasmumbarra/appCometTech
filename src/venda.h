@@ -19,6 +19,7 @@ typedef struct
   int pagamento;
   float total;
   int tamanho;
+  int ativo;
 } Venda;
 
 void BaseVenda();
@@ -37,6 +38,8 @@ void ExibirListaVenda(Venda *venda);
 
 void ListarVenda();
 
-void AlterarVenda(char *cod);
+void AlterarVenda(char *cod, int *val);
+
+int PesquisarVendaLt();
 
 #endif // VENDAS_H
