@@ -19,8 +19,6 @@ void MenuCliente()
     printf(" 1 - CADASTRAR CLIENTE\n");
     printf(" 2 - PESQUISAR CLIENTE\n");
     printf(" 3 - LISTAR CLIENTE \n");
-    printf(" 4 - ALTERAR CLIENTE \n");
-    printf(" 5 - EXCLUIR CLIENTE \n");
     printf(" 0  - VOLTAR");
 
     printf("\n Escolha uma das opções acima: ");
@@ -34,39 +32,25 @@ void MenuCliente()
       printf(" //////////////////////////////////////////////////////////////////////\n");
       printf("\n                  COMET TECH - CADASTRAR CLIENTE\n");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
+      CadastrarCliente();
       break;
     case 2:
       system("cls");
       printf(" //////////////////////////////////////////////////////////////////////\n");
       printf("\n                  COMET TECH - PESQUISAR CLIENTE\n");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
+      PesquisarCliente();
       break;
     case 3:
       system("cls");
       printf(" //////////////////////////////////////////////////////////////////////\n");
       printf("\n                  COMET TECH - LISTAR CLIENTE\n");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
-      break;
-    case 4:
-      system("cls");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      printf("\n                 COMET TECH - ALTERAR CLIENTE\n");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
-      break;
-    case 5:
-      system("cls");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      printf("\n                 COMET TECH - EXCLUIR CLIENTE\n");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
+      ListarCliente();
       break;
     case 0:
       system("cls");
-      MenuGerencia(&funcionario);
+      MenuVendedor(&funcionario);
       break;
     }
   } while (op != 0);
@@ -88,11 +72,8 @@ void MenuProduto()
     printf(" //////////////////////////////////////////////////////////////////////\n");
 
     printf("\n\n ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n\n");
-    printf(" 1 - CADASTRAR PRODUTO\n");
-    printf(" 2 - PESQUISAR PRODUTO\n");
-    printf(" 3 - LISTAR PRODUTO \n");
-    printf(" 4 - ALTERAR PRODUTO \n");
-    printf(" 5 - EXCLUIR PRODUTO \n");
+    printf(" 1 - PESQUISAR PRODUTO\n");
+    printf(" 2 - LISTAR PRODUTO \n");
     printf(" 0 - VOLTAR");
 
     printf("\n Escolha uma das opções acima: ");
@@ -104,51 +85,30 @@ void MenuProduto()
     case 1:
       system("cls");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      printf("\n                  COMET TECH - CADASTRAR PRODUTO\n");
+      printf("\n                  COMET TECH - PESQUISAR PRODUTO\n");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
+      PesquisarProduto();
       break;
     case 2:
       system("cls");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      printf("\n                  COMET TECH - PESQUISAR PRODUTO\n");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
-      break;
-    case 3:
-      system("cls");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
       printf("\n                  COMET TECH - LISTAR PRODUTO\n");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
-      break;
-    case 4:
-      system("cls");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      printf("\n                 COMET TECH - ALTERAR PRODUTO\n");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
-      break;
-    case 5:
-      system("cls");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      printf("\n                 COMET TECH - EXCLUIR PRODUTO\n");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
+      ListarProduto();
       break;
     case 0:
       system("cls");
-      MenuGerencia(&funcionario);
+      MenuVendedor(&funcionario);
       break;
     }
   } while (op != 0);
 }
 
-void MenuVenda()
+void MenuVenda(Funcionario *funcionario)
 {
-  int op;
+  int op, val;
 
-  Funcionario funcionario;
+  char cod[30];
 
   do
   {
@@ -163,9 +123,7 @@ void MenuVenda()
     printf(" 1 - CADASTRAR VENDA\n");
     printf(" 2 - PESQUISAR VENDA\n");
     printf(" 3 - LISTAR VENDA \n");
-    printf(" 4 - ALTERAR VENDA \n");
-    printf(" 5 - EXCLUIR VENDA \n");
-    printf(" 0 - VOLTAR");
+    printf(" 0 - VOLTAR\n");
 
     printf("\n Escolha uma das opções acima: ");
     scanf("%d", &op);
@@ -178,39 +136,42 @@ void MenuVenda()
       printf(" //////////////////////////////////////////////////////////////////////\n");
       printf("\n                  COMET TECH - CADASTRAR VENDA\n");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
+      BaseSelecao(funcionario->cod);
+      CadastrarSelecao();
+      printf("\n Deseja continuar a compra: 1 - Sim   2 - Não: \n Selecione a opção: ");
+      scanf("%i", &op);
+      if (op == 1)
+      {
+        ExibirVenda(funcionario->cod);
+        break;
+      }
+      else if (op == 2)
+      {
+        printf("Pressione ENTER para voltar ao menu.");
+        break;
+      }
+      else
+      {
+        printf("\n\n Opção inválida! \n");
+        Sleep(1);
+      }
       break;
     case 2:
       system("cls");
       printf(" //////////////////////////////////////////////////////////////////////\n");
       printf("\n                  COMET TECH - PESQUISAR VENDA\n");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
+      PesquisarVendaLt();
       break;
     case 3:
       system("cls");
       printf(" //////////////////////////////////////////////////////////////////////\n");
       printf("\n                  COMET TECH - LISTAR VENDA\n");
       printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
-      break;
-    case 4:
-      system("cls");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      printf("\n                 COMET TECH - ALTERAR VENDA\n");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
-      break;
-    case 5:
-      system("cls");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      printf("\n                 COMET TECH - EXCLUIR VENDA\n");
-      printf(" //////////////////////////////////////////////////////////////////////\n");
-      system("pause");
+      ListarVenda();
       break;
     case 0:
       system("cls");
-      MenuGerencia(&funcionario);
       break;
     }
   } while (op != 0);

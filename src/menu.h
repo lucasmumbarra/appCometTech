@@ -7,4 +7,6 @@
 #include "funcionario.h"
 
 void MenuGerencia(Funcionario *funcionario);
+
+void MenuVendedor(Funcionario *funcionario);
 #endif // MENU_H

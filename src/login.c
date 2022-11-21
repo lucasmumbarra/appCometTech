@@ -10,7 +10,7 @@ void login()
     {
         system("cls");
         printf(" //////////////////////////////////////////////////////////////////////\n");
-        printf("                           SEJA BEM VINDO \n");
+        printf("                           SEJA BEM-VINDO \n");
         printf("\n");
         printf(" //////////////////////////////////////////////////////////////////////\n");
 
@@ -24,7 +24,6 @@ void login()
         fgets(senha, sizeof(senha), stdin);
         senha[strlen(senha) - 1] = '\0';
 
-        // MenuGerencia();
         VerificarLogin(usuario, senha);
     }
 }
@@ -54,8 +53,7 @@ void VerificarLogin(char *usuario, char *senha)
                 if (fLogin.tipo == 2)
                 {
                     system("cls");
-                    printf("Menu em desenvolvimento\n");
-                    system("pause");
+                    MenuVendedor(&fLogin);
                 }
                 else
                 {
