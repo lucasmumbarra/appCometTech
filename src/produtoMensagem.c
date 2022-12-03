@@ -2,7 +2,7 @@
 
 void ProdutoLiteDescricao()
 {
-  printf("Sistema de gestão simples para restaurantes e delivery, digitalize seu pequeno ou médio negócio.");
+  printf("Gestão simples para restaurantes e delivery.");
   printf("\n O Comet Chef Lite  traz a automatização digital facilitada e ágil na gestão diária do seu negócio.\n O sistema possui funcionalidades desenvolvidas para qualificar e aumentar suas vendas por meio da integração\n e centralização de aplicativos de delivery.");
 }
 
@@ -14,27 +14,27 @@ void ProdutoProDescricao()
 
 void ProdutoLiteCategoriaRestaurante()
 {
-  printf("O sistema para restaurante e similares otimiza a sua rotina com comanda eletrônica,\n cardápio digital, gestão financeira, controle de estoque, integração com aplicativos de delivery, entre outros.");
+  printf("O sistema para restaurante e food services similares com controle de estoque,\n cardápio digital, comanda eletrônica, gestão financeira, entre outros.");
 }
 
 void ProdutoLiteCategoriaDelivery()
 {
-  printf("O sistema para delivery garante uma melhor organização de operações de produção,\n entrega e estoque do seu negócio. A integração com os aplicativos de delivery acontece\n no nosso sistema, sem a necessidade de abrir o painel de cada um para ver os pedidos.");
+  printf("O sistema para delivery garante uma melhor organização de operações de produção,\n entrega e estoque do seu negócio.");
 }
 
 void ProdutoLiteCategoriaHamburgueria()
 {
-  printf("O sistema para hamburgueria auxilia no atendimento das entregas dos pedidos\n das mesas, balção e delivery com a digitalização de todas as operações para um atendimento eficaz.");
+  printf("O sistema para hamburgueria auxilia no atendimento das entregas dos pedidos\n das mesas, balcão e delivery com a digitalização de todas as operações para um atendimento eficaz.");
 }
 
 void ProdutoLiteCategoriaPizzaria()
 {
-  printf("O sistema para pizzaria que possibilita vendas fracionadas alavanca seu estabelecimento\n por meio do controle do estoque, entregas, caixa e comandas.");
+  printf("O sistema para pizzaria possibilita vendas fracionadas\n por meio do controle do estoque, entregas, caixa e comandas.");
 }
 
 void ItensInclusosLite() {
   printf("O que está incluso no comet chef lite: \n");
-  printf("   - Pedidos em comanda, mesa  e balção;\n");
+  printf("   - Pedidos em comanda, mesa  e balcão;\n");
   printf("   - Integração aiqfome e iFood;\n");
   printf("   - Abertura e fechamento de caixa cego;\n");
   printf("   - Relatório de vendas;\n");
@@ -47,7 +47,7 @@ void FuncionalidadeLite() {
   printf("\n   - Fechamento de caixa cego;");
   printf("\n   - Gestão de mesas e comandas;");
   printf("\n   - Gerenciamento de equipes;");
-  printf("\n   - Impressão automática de cozinha e balção;");
+  printf("\n   - Impressão automática de cozinha e balcão;");
   printf("\n   - Dashboard de ticket médio, pedidos no mês, pedidos cancelados, entre outros;");
   printf("\n   - Lançamento de mesas avulsas;");
   printf("\n   - Gerenciamento de entregas e delivery;");
@@ -65,7 +65,7 @@ void IntegracaoLite()
 void ItensInclusosPro()
 {
   printf("O que está incluso no comet chef pro: \n");
-  printf("   - Pedidos em comanda, mesa  e balção;\n");
+  printf("   - Pedidos em comanda, mesa  e balcão;\n");
   printf("   - Delivery próprio com rotas automatizadas;\n");
   printf("   - Controle financeiro e de caixa avançados;\n");
   printf("   - Controle de estoque e insumos avançados;\n");
@@ -76,8 +76,8 @@ void ItensInclusosPro()
 
 void FuncionalidadePro()
 {
-  printf("Sistema PDV, controle de estoque, cardápio digital, rotas automatizadas, entre outros.");
-  printf("\n   - Venda balção:");
+  printf("Sistema PDV, rotas automatizadas, cardápio digital, controle de estoque, entre outros.");
+  printf("\n   - Venda balcão:");
   printf("\n       - Sistema PDV                    - Cadastro de produtos");
   printf("\n       - Leitor de códigos de barras    - Controle de estoque");
   printf("\n   - Controle de mesas e comandas:");

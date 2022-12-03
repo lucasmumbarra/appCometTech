@@ -1,3 +1,9 @@
+// * Procedimento que realiza a verificação dos dados *
+// * de login										  *
+// *                                                  *
+// *          	                                      *
+// *                                                  *
+// * **************************************************/
 #include "login.h"
 
 void login()

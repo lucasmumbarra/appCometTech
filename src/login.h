@@ -1,6 +1,9 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
+/***************************************************
+ * Bibliotecas                                     *
+ * ************************************************/
 #include "libs.h"
 #include "funcionario_login.h"
 

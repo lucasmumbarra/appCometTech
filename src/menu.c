@@ -1,3 +1,10 @@
+// * Procedimento que direciona o vendendor e o administrador *
+// * para as sua oções                                        *
+// *                                                          *
+// *  ENTRADA:  N/A                                           *
+// *  SAIDA: Exibição dos dados                               *
+// * **********************************************************/
+
 #include "menu.h"
 
 void MenuGerencia(Funcionario *funcionario)

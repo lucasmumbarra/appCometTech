@@ -1,5 +1,6 @@
+// Inclusão do cabeçario de funcionaio login
 #include "funcionario_login.h"
-
+// Implementação da função base funcionario login
 void BaseFuncionarioLogin()
 {
 
@@ -14,7 +15,7 @@ void BaseFuncionarioLogin()
         }
     }
 }
-
+//Implementação da função inicializar funcionario login
 void InicializarFuncionarioLogin(FuncionarioLogin *fLogin)
 {
     strcpy(fLogin->cod, "");
@@ -24,7 +25,7 @@ void InicializarFuncionarioLogin(FuncionarioLogin *fLogin)
     fLogin->ativo = 1;
     fLogin->tipo = 1;
 }
-
+// Implementação da função que realiza a leitura dos dados do teclado
 void LerFuncionarioLogin(FuncionarioLogin *fLogin)
 {
     sprintf(fLogin->cod, "%i", CarregarCodigoFuncionarioLogin());
@@ -50,7 +51,7 @@ void LerFuncionarioLogin(FuncionarioLogin *fLogin)
     fflush(stdin);
     scanf("%i", &fLogin->tipo);
 }
-
+// Implementação da função de exibição
 void ExibirFuncionarioLogin(FuncionarioLogin *fLogin)
 {
     printf("\n Código: %s", fLogin->cod);
@@ -64,7 +65,7 @@ void ExibirFuncionarioLogin(FuncionarioLogin *fLogin)
         printf("\n Função: Vendedor");
     }
 }
-
+// Implementação da função cadastro
 void CadastrarFuncionarioLogin()
 {
     FuncionarioLogin fLogin;
@@ -158,21 +159,24 @@ void CadastrarFuncionarioLogin()
         }
     }
 }
-
+// Implementação da função listar
 void ListarFuncionarioLogin()
 {
+    // Abrir o arquivo para leitura
     BaseFuncionarioLogin();
     FuncionarioLogin fLogin;
+    // Inicializar estrutura
     InicializarFuncionarioLogin(&fLogin);
     int linha = 0;
-    rewind(fp);
-
+    rewind(fp); // coloca o curso no inicio do arquivo
+    // Percorrer o arquivo até o final dele
     while (!feof(fp))
-    {
+    {   //verifica se contém dados no início do arquivo
         if (fread(&fLogin, sizeof(FuncionarioLogin), 1, fp) != 1)
         {
             break;
         }
+        // Se funcionário Login for igual a ativo 0 pula para o final do laço e faz uma nova leitura no próximo registro
         if (fLogin.ativo == 0)
         {
             continue;
@@ -185,7 +189,7 @@ void ListarFuncionarioLogin()
         printf("\n ++++++++++++++++ \n");
         linha++;
     }
-
+    // Verificador pra ver se tem registros no arquivo
     if (linha == 0)
     {
         printf("\n Não contém registros. \n");
@@ -193,18 +197,20 @@ void ListarFuncionarioLogin()
     printf("\n Pressione ENTER para voltar ao MENU.");
     getche();
 }
-
+// Implementação da função pesquisa
 int PesquisarFuncionarioLogin()
-{
+{   // Abrir o arquivo pessoa
     BaseFuncionarioLogin();
+    // Criar estrutura
     FuncionarioLogin fLogin;
+    // Inicializar estrutura
     InicializarFuncionarioLogin(&fLogin);
-
+    // Variáveis de captura para a comparação dos parâmetros
     char valor[MAX];
     strcpy(valor, "");
 
     int pos = 0, linha = 0, op;
-
+    // Colocar o cursor no inicio do arquivo
     rewind(fp);
 
     while (!feof(fp))
@@ -213,21 +219,22 @@ int PesquisarFuncionarioLogin()
         fflush(stdin);
         fgets(valor, MAX, stdin);
         valor[strlen(valor) - 1] = '\0';
-
+        // Verificar a quantidade de caracteres digitados
         if (strlen(valor) < 1)
         {
             printf("Nome Inválido! \n\n");
         }
         else
-        {
+        {   // Realiza a leitura dos registros
             while (fread(&fLogin, sizeof(FuncionarioLogin), 1, fp))
-            {
+            {   // Realiza os comparativos
                 if (fLogin.ativo != 0 && strstr(fLogin.nome, valor) || fLogin.ativo != 0 && strstr(fLogin.usuario, valor))
                 {
                     ExibirFuncionarioLogin(&fLogin);
-                    pos = 1;
+                    pos = 1; // Informa se achou o registro
                     printf("\n\n Pressione ENTER para continuar.");
                     getche();
+                    // Manda a posição do registro no arquivo para exclusão e alteraçaõ
                     return linha;
                 }
                 linha++;
@@ -244,9 +251,9 @@ int PesquisarFuncionarioLogin()
     }
     fclose(fp);
 }
-
+// Implementação da função de exclusão
 void ExcluirFuncionarioLogin()
-{
+{   // Abrir o arquivo
     BaseFuncionarioLogin();
     FuncionarioLogin fLogin;
     InicializarFuncionarioLogin(&fLogin);
@@ -254,9 +261,9 @@ void ExcluirFuncionarioLogin()
     int pos = 0, op;
 
     pos = PesquisarFuncionarioLogin();
-
+    // Possiciona o curso até o registro partindo do inicio
     fseek(fp, pos * sizeof(FuncionarioLogin), SEEK_SET);
-
+    // Realizo a leitura e vejo se naquela posição tem algum registro
     if (fread(&fLogin, sizeof(FuncionarioLogin), 1, fp) == 1)
     {
         while (1)
@@ -267,10 +274,10 @@ void ExcluirFuncionarioLogin()
             scanf("%i", &op);
 
             if (op == 1)
-            {
-                fLogin.ativo = 0;
+            {   // Troca o ativo 1 por 0
+                fLogin.ativo = 0; // Possiciona o curso novamente no registro para sobreescrevelo
                 fseek(fp, pos * sizeof(FuncionarioLogin), SEEK_SET);
-
+                // Realiza a gravação
                 if (fwrite(&fLogin, sizeof(FuncionarioLogin), 1, fp) != 1)
                 {
                     printf("\n Falha ao excluir o registro!\n");
@@ -294,9 +301,9 @@ void ExcluirFuncionarioLogin()
     }
     fclose(fp);
 }
-
+// Implementação da função alterar
 void AlterarFuncionarioLogin()
-{
+{   // Abre o arquivo
     BaseFuncionarioLogin();
     FuncionarioLogin fLogin;
 
@@ -375,13 +382,13 @@ void AlterarFuncionarioLogin()
 }
 
 int CarregarCodigoFuncionarioLogin()
-{
+{   // Abrir o arquivo para leitura
     BaseFuncionarioLogin();
     FuncionarioLogin fLogin;
-
+    // Inicializar nossa estrutura
     int linha = 0;
-    rewind(fp);
-
+    rewind(fp); // Coloca o curso no inicio do arquivo
+    // percorre o arquivo até o final dele
     while (!feof(fp))
     {
         if (fread(&fLogin, sizeof(FuncionarioLogin), 1, fp) != 1)
